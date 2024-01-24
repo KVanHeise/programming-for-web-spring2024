@@ -1,26 +1,34 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": "eslint:recommended",
-    "overrides": [
-        {
-            "env": {
-                "node": true
-            },
-            "files": [
-                ".eslintrc.{js,cjs}"
-            ],
-            "parserOptions": {
-                "sourceType": "script"
-            }
-        }
+
+    "plugins": [
+        "p5js"
     ],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "rules": {
+
+"env": {
+    "browser": true,
+    "es2021": true,
+    "p5js/p5": true,
+},
+"extends": [
+    "eslint:recommended",
+    "plugin:p5js/p5"
+],
+"overrides": [
+    {
+        "env": {
+            "node": true
+        },
+        "files": [
+            ".eslintrc.{js,cjs}"
+        ],
+        "parserOptions": {
+            "sourceType": "script"
+        }
     }
+],
+"parserOptions": {
+    "ecmaVersion": "latest"
+},
+"rules": {
+}
 }
