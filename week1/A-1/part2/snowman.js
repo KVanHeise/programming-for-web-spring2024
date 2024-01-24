@@ -1,4 +1,3 @@
-let grid = undefined;
 let stroke1 = prompt("enter a basic color name in lower case", "gray");
 let stroke2 = prompt("enter another basic color name in lower case", "purple");
 let stroke3 = prompt("enter another baisc color name in lower case", "orange")
