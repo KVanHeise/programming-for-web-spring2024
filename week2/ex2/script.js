@@ -31,3 +31,5 @@ const myFavoriteGames = [
         synopsis: "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home?",
     },
 ]
+
+console.log(myFavoriteGames)
