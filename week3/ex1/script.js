@@ -4,21 +4,51 @@ function setup() {
 
 function createTile() {
     translate(0, 0);
-    fill("blue");
+
+    fill("rgb(132, 61, 95)");
     rect(0, 0, 200, 200);
-    stroke("white");
+
+    stroke("rgb(140, 149, 217)");
     strokeWeight(5);
     line(0, 0, 200, 200);
     line(200, 0, 0, 200);
+
+    stroke("white");
+    strokeWeight(1);
+    line(0, 0, 200, 200);
+    line(200, 0, 0, 200);
+
     noStroke()
-    fill("yellow");
+    fill("rgb(140, 149, 217)");
     circle(100, 50, 50);
     circle(50, 100, 50);
     circle(150, 100, 50);
     circle(100, 150, 50);
-    noFill();
-    stroke("purple");
+
+    noFill()
+    stroke("rgb(132, 61, 95)");
     strokeWeight(5);
+    circle(100, 50, 25);
+    circle(50, 100, 25);
+    circle(150, 100, 25);
+    circle(100, 150, 25);
+
+    noFill()
+    stroke("white");
+    strokeWeight(1);
+    circle(100, 50, 25);
+    circle(50, 100, 25);
+    circle(150, 100, 25);
+    circle(100, 150, 25);
+
+    noFill();
+    stroke("rgb(132, 61, 95)");
+    strokeWeight(5);
+    circle(100, 100, 100);
+
+    noFill();
+    stroke("white");
+    strokeWeight(1);
     circle(100, 100, 100);
 }
 
