@@ -1,32 +1,32 @@
 function setup() {
-    createCanvas(200, 200);
+    createCanvas(600, 600);
 }
 
-function createTile() {
-    translate(0, 0);
+function createTile(originX, originY, primaryColor, secondaryColor, innerLineColor) {
+    translate(originX, originY);
 
-    fill("rgb(51, 102, 204)");
+    fill(primaryColor);
     rect(0, 0, 200, 200);
 
-    stroke("rgb(140, 149, 217)");
+    stroke(secondaryColor);
     strokeWeight(5);
     line(0, 0, 200, 200);
     line(200, 0, 0, 200);
 
-    stroke("white");
+    stroke(innerLineColor);
     strokeWeight(1);
     line(0, 0, 200, 200);
     line(200, 0, 0, 200);
 
     noStroke()
-    fill("rgb(140, 149, 217)");
+    fill(secondaryColor);
     circle(100, 50, 50);
     circle(50, 100, 50);
     circle(150, 100, 50);
     circle(100, 150, 50);
 
     noFill()
-    stroke("rgb(51, 102, 204)");
+    stroke(primaryColor);
     strokeWeight(5);
     circle(100, 50, 25);
     circle(50, 100, 25);
@@ -34,7 +34,7 @@ function createTile() {
     circle(100, 150, 25);
 
     noFill()
-    stroke("white");
+    stroke(innerLineColor);
     strokeWeight(1);
     circle(100, 50, 25);
     circle(50, 100, 25);
@@ -42,17 +42,26 @@ function createTile() {
     circle(100, 150, 25);
 
     noFill();
-    stroke("rgb(51, 102, 204)");
+    stroke(primaryColor);
     strokeWeight(5);
     circle(100, 100, 100);
 
     noFill();
-    stroke("white");
+    stroke(innerLineColor);
     strokeWeight(1);
     circle(100, 100, 100);
 }
 
 function draw() {
-    createTile();
-    noLoop();
+    createTile(0, 0, "rgb(51, 102, 204)", "rgb(140, 149, 217)", "white");
+    createTile(0, 200, "rgb(140, 149, 217)", "rgb(51, 102, 204)", "black");
+    createTile(0, 200, "rgb(51, 102, 204)", "rgb(140, 149, 217)", "white");
+
+    createTile(200, -400, "rgb(140, 149, 217)", "rgb(51, 102, 204)", "black");
+    createTile(0, 200, "rgb(51, 102, 204)", "rgb(140, 149, 217)", "white");
+    createTile(0, 200, "rgb(140, 149, 217)", "rgb(51, 102, 204)", "black");
+
+    createTile(200, -400, "rgb(51, 102, 204)", "rgb(140, 149, 217)", "white");
+    createTile(0, 200, "rgb(140, 149, 217)", "rgb(51, 102, 204)", "black");
+    createTile(0, 200, "rgb(51, 102, 204)", "rgb(140, 149, 217)", "white");
 }
