@@ -5,7 +5,7 @@ function setup() {
 function createTile() {
     translate(0, 0);
 
-    fill("rgb(132, 61, 95)");
+    fill("rgb(51, 102, 204)");
     rect(0, 0, 200, 200);
 
     stroke("rgb(140, 149, 217)");
@@ -26,7 +26,7 @@ function createTile() {
     circle(100, 150, 50);
 
     noFill()
-    stroke("rgb(132, 61, 95)");
+    stroke("rgb(51, 102, 204)");
     strokeWeight(5);
     circle(100, 50, 25);
     circle(50, 100, 25);
@@ -42,7 +42,7 @@ function createTile() {
     circle(100, 150, 25);
 
     noFill();
-    stroke("rgb(132, 61, 95)");
+    stroke("rgb(51, 102, 204)");
     strokeWeight(5);
     circle(100, 100, 100);
 
