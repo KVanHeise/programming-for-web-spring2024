@@ -22,6 +22,8 @@ let statements = [
     {question: "Which color is opposite purple on the color wheel?", answer: "yellow"}
 ];
 
+//Win vs Loss Message Pop-Ups
+
 function next() {
     if (statements.length < 1) {
         alert("Congratulations! You've won!");
@@ -35,6 +37,8 @@ function next() {
     const randomIndex = Math.ceil(Math.random() * statements.length - 1);
     return statements[randomIndex];
 }
+
+//Checking the Answers
 
 function checkQuestion(){
     if (currentQuestion.answer === questionInput.value()){
