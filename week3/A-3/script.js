@@ -66,7 +66,7 @@ let message = currentQuestion.question;
 function setup()
     {
     createCanvas(800, 600);
-    heading = createElement("h2", ["Color Quiz"]);
+    heading = createElement("h2", "Color Quiz");
     heading.position(100, 100);
     questionInput = createInput("");
     questionInput.size(250, 24);
