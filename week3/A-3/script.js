@@ -1,16 +1,10 @@
-// Create a quiz game using these parameters:
-
-// Required:
+// Create a quiz game using these required parameters:
 // Ask the user randomized questions using the p5 text commands.
 // Allow the user to respond using a p5 dom text input with submit button
 // Remove correct answers from those being asked
 // Provide feedback to the user regarding the results of their answer (was it correct or not).
 // If the user misses 5 or more questions, display feedback that the user has lost.
 // If the user correctly answers all the questions, display feedback that the user has won.
-
-// Optional:
-// Give the user the ability to restart the quiz.
-// Display the number of incorrect answers or the number of incorrect answers until they loose.
 
 let questionInput;
 let currentQuestion;
@@ -48,35 +42,42 @@ function checkQuestion(){
         statements = statements.filter(statementObj => {
             return currentQuestion.answer !== statementObj.answer;
         });
+
         // this is the correct condition
         response = "Correct! Next Question!";
         responseColor = "green";
     }
-        else {
-            //this is the wrong answer condition and tracker
-            errorCount++;
-            response = "Sorry, that's incorrect. Please try again!";
-            responseColor = "red";
-        }
 
-        currentQuestion = next();
-        questionInput.value("");
-        if (currentQuestion) {
-            message = currentQuestion.question || "";
-        }
+    else {
+        //this is the wrong answer condition and error counter
+        errorCount++;
+        response = "Sorry, that's incorrect. Please try again!";
+        responseColor = "red";
+    }
+
+    currentQuestion = next();
+    questionInput.value("");
+    if (currentQuestion) {
+        message = currentQuestion.question || "";
+    }
 }
 
 currentQuestion = next();
 let message = currentQuestion.question;
 
+//functions for drawing the elements and setting up the page:
+
 function setup()
     {
     createCanvas(800, 600);
+    textFont("Protest Riot");
     heading = createElement("h2", "Color Quiz");
     heading.position(100, 100);
+
     questionInput = createInput("");
     questionInput.size(250, 24);
     questionInput.position(100, 220);
+    
     submitAnswerButton = createButton("submit answer");
     submitAnswerButton.size(250, 24);
     submitAnswerButton.mousePressed(checkQuestion);
@@ -89,6 +90,7 @@ function draw() {
     textSize(24);
     text(message, 100, 200);
 
+    // Display for Correct vs Incorrect Answer
     fill(responseColor);
     text(response, 100, 350);
 }
