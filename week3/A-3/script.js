@@ -24,13 +24,12 @@ let statements = [
     {question: "What color do you get when you combine yellow and red?", answer: "orange"},
     {question: "When black is added to a color, it is called a:", answer: "shade"},
     {question: "When white is added to a color, it is called a:", answer: "tint"},
-    {question: "Which color is opposite purple on the color wheel?", answer: "yellow"},
-    {question: "What is the name of a 'true color'? (A color without white or black added to it.)", answer: "hue"}
+    {question: "Which color is opposite purple on the color wheel?", answer: "yellow"}
 ];
 
 function next() {
-    if(statements.length < 1) {
-        alert("you won");
+    if (statements.length < 1) {
+        alert("Congratulations! You've won!");
         return;
     }
 
@@ -39,12 +38,26 @@ function next() {
 }
 
 function checkQuestion(){
-    if(currentQuestion.answer === input.value()){
+    if (currentQuestion.answer === questionInput.value()){
         //remove correct answer from array
         statements = statements.filter(statementObj => {
             return currentQuestion.answer !== statementObj.answer;
         });
+        // this is the correct condition
+        response = "Correct! Next Question:";
+        responseColor = "green";
     }
+        else {
+            //this is the wrong answer condition
+            response = "Sorry, that's incorrect. Please try again!";
+            responseColor = "red";
+        }
+
+        currentQuestion = next();
+        questionInput.value("");
+        if (currentQuestion) {
+            message = currentQuestion.question || "";
+        }
 }
 
 currentQuestion = next();
@@ -53,7 +66,6 @@ let message = currentQuestion.question;
 function setup()
     {
     createCanvas(800, 600);
-    background("lightblue");
     heading = createElement("h2", ["Color Quiz"]);
     heading.position(100, 100);
     questionInput = createInput("");
@@ -61,11 +73,16 @@ function setup()
     questionInput.position(100, 220);
     submitAnswerButton = createButton("submit answer");
     submitAnswerButton.size(250, 24);
+    submitAnswerButton.mousePressed(checkQuestion);
     submitAnswerButton.position(100, 260);
 }
 
 function draw() {
+    background("lightblue");
     fill("purple");
     textSize(24);
     text(message, 100, 200);
+
+    fill(responseColor);
+    text(response, 100, 350);
 }
