@@ -15,6 +15,7 @@
 let questionInput;
 let currentQuestion;
 let response;
+let errorCount = "0";
 let responseColor = "green";
 let submitAnswerButton;
 let heading;
@@ -32,6 +33,10 @@ function next() {
         alert("Congratulations! You've won!");
         return;
     }
+    else if(errorCount > 4) {
+    alert("You've lost! Better luck next time!");
+    return;
+    }
 
     const randomIndex = Math.ceil(Math.random() * statements.length - 1);
     return statements[randomIndex];
@@ -44,11 +49,12 @@ function checkQuestion(){
             return currentQuestion.answer !== statementObj.answer;
         });
         // this is the correct condition
-        response = "Correct! Next Question:";
+        response = "Correct! Next Question!";
         responseColor = "green";
     }
         else {
-            //this is the wrong answer condition
+            //this is the wrong answer condition and tracker
+            errorCount++;
             response = "Sorry, that's incorrect. Please try again!";
             responseColor = "red";
         }
