@@ -3,6 +3,7 @@ const circleDiameter = 100;
 
 let startingX = 200;
 let startingY = 100;
+
 let myCircles = [];
 let startingId = 0;
 
