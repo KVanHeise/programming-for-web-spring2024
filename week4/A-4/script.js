@@ -3,12 +3,10 @@ const rectHeight = 75;
 let rectY;
 const rectWidth = 75;
 let clickCount = 0;
-let speed;
 
 function setup() {
     createCanvas(500, 500);
     rectY = random(height - rectHeight);
-    speed = random(1, 3);
 }
 
 //draw the shapes within the canvas
@@ -16,7 +14,6 @@ function setup() {
 function draw() {
     background(155);
     drawShape();
-    rectX+= speed;
 
 //display score at end of clicking game
 
