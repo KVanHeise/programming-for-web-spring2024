@@ -40,9 +40,20 @@ function preload(){
 function setup() {
     createCanvas(950, 950);
     background(0);
+    let selectedFaces = [];
+    for (let z = 0; z <8; z++){
+        const randomInx = floor(random(cardFaceArray.length));
+        const face = cardFaceArray[randomInx];
+        selectedFaces.push(face);
+        selectedFaces.push(face);
+        //remove the used cardface so it doesn't get selected again:
+        cardFaceArray.splice(randomInx, 1);
+    }
+    selectedFaces = shuffleArray(selectedFaces);
     for (let j = 0; j < 4; j++) {
         for (let i = 0; i < 4; i++) {
-            cards.push(new Card(startingX, startingY, cardFaceArray[0]));
+            const faceImage = selectedFaces.pop();
+            cards.push(new Card(startingX, startingY, faceImage));
             startingX += 200;
         }
         startingY += 200;
@@ -97,3 +108,18 @@ class Card {
         this.show();
     }
 }
+
+    function shuffleArray (array) {
+        let counter = array.length;
+        while (counter > 0) {
+            // Pick random index
+            const idx = Math.floor(Math.random() * counter);
+            //decrease counter by 1 (decrement)
+            counter--;
+            //swap the last element with it
+            const temp = array[counter];
+            array[counter] = array[idx];
+            array[idx] = temp;
+        }
+        return array;
+    }
