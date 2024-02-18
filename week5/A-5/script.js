@@ -10,7 +10,6 @@
 // Keep score
 // Indicate when the user has completed all the matches
 
-let myCard;
 const DOWN = "down";
 const UP = "up";
 let startingX = 100;
@@ -18,8 +17,13 @@ let startingY = 100;
 let cards = [];
 
 const gameState = {
-
+    totalPairs: 8,
+    flippedCards: [],
+    numberMatched: 0,
+    attempts: 0,
+    waiting: false
 };
+
 let cardFaceArray = [];
 
 let cardBack;
@@ -39,7 +43,6 @@ function preload(){
 
 function setup() {
     createCanvas(950, 950);
-    background(0);
     let selectedFaces = [];
     for (let z = 0; z <8; z++){
         const randomInx = floor(random(cardFaceArray.length));
@@ -61,10 +64,56 @@ function setup() {
     }
 }
 
+function draw () {
+    background(0);
+    if (gameState.numberMatched === gameState.totalPairs) {
+        fill("yellow");
+        textSize(66);
+        text("you win!!!!!", 400, 425);
+        noLoop();
+    }
+    for (let g = 0; g < cards.length; g++) {
+        if(!cards[g].isMatch) {
+            cards[g].face = DOWN;
+        }
+        cards[g].show();
+    }
+    noLoop;
+    gameState.flippedCards.length = 0;
+    gameState.waiting = false;
+    fill(255);
+    textSize(36);
+    text("attempts " + gameState.attempts, 100, 900);
+    text ("matches " + gameState.numberMatched, 300, 900);
+}
+
 function mousePressed() {
+    if (gameState.waiting) {
+        return;
+    }
     for (let k = 0; k < cards.length; k++){
-        if (cards[k].didHit(mouseX, mouseY)) {
-            console.log("flipped");
+        //first check flipped cards length, and then we can trigger the flip
+        if (gameState.flippedCards.length < 2 && cards[k].didHit(mouseX, mouseY)) {
+            gameState.flippedCards.push(cards[k]);
+        }
+    }
+    if (gameState.flippedCards.length === 2) {
+        if (gameState.flippedCards[0].cardFaceImg === gameState.flippedCards[1].cardFaceImg) {
+            //cards match! Time to score!
+            //mark cards as matched so they don't flip back
+            gameState.flippedCards[0].isMatched = true;
+            gameState.flippedCards[1].isMatched = true;
+            //empty the flipped cards array
+            gameState.flippedCards.length = 0;
+            //imcrement the score
+            gameState.numberMatched++;
+            loop();
+        } else {
+            gameState.waiting = true;
+            const loopTimeout = window.setTimeout(() => {
+                loop();
+                window.clearTimeout(loopTimeout);
+            }, 1000)
         }
     }
 }
@@ -77,17 +126,19 @@ class Card {
         this.height = 150;
         this.face = DOWN;
         this.cardFaceImg = cardFaceImg;
+        this.isMatched = false;
         this.show();
     }
+
     show () {
-        if (this.face === DOWN) {
-        fill("rgb(57.7%, 9.9%, 9.9%)");
-        rect(this.x, this.y, this.width, this.height, 10);
-        image(cardBack, this.x, this.y);
-        } else {
+        if (this.face === UP || this.isMatched) {
             fill("#aaa");
             rect(this.x, this.y, this.width, this.height, 10);
             image(this.cardFaceImg, this.x, this.y);
+        } else {
+            fill("rgb(57.7%, 9.9%, 9.9%)");
+            rect(this.x, this.y, this.width, this.height, 10);
+            image(cardBack, this.x, this.y);
         }
     }
 
