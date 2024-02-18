@@ -69,22 +69,22 @@ function draw () {
     if (gameState.numberMatched === gameState.totalPairs) {
         fill("yellow");
         textSize(66);
-        text("you win!!!!!", 400, 425);
+        text("you win!!!!", 550, 60);
         noLoop();
     }
-    for (let g = 0; g < cards.length; g++) {
-        if(!cards[g].isMatch) {
-            cards[g].face = DOWN;
+    for (let k = 0; k < cards.length; k++) {
+        if(!cards[k].isMatched) {
+            cards[k].face = DOWN;
         }
-        cards[g].show();
+        cards[k].show();
     }
-    noLoop;
+    noLoop();
     gameState.flippedCards.length = 0;
     gameState.waiting = false;
     fill(255);
-    textSize(36);
-    text("attempts " + gameState.attempts, 100, 900);
-    text ("matches " + gameState.numberMatched, 300, 900);
+    textSize(36)
+    text("attempts " + gameState.attempts, 50, 50);
+    text("matches " + gameState.numberMatched, 300, 50);
 }
 
 function mousePressed() {
@@ -98,6 +98,7 @@ function mousePressed() {
         }
     }
     if (gameState.flippedCards.length === 2) {
+        gameState.attempts++;
         if (gameState.flippedCards[0].cardFaceImg === gameState.flippedCards[1].cardFaceImg) {
             //cards match! Time to score!
             //mark cards as matched so they don't flip back
