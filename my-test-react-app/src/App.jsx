@@ -1,10 +1,10 @@
 function App() {
-  const happy = true;
+  const happy = false;
 
   return (
       <div>
-        Hi this is a React App that I made!
-        {happy ? (<div>I am happy</div>) : (<div>I am not so happy</div>)}
+        <h1>Hello, world! This is my first React App!</h1>
+        {happy ? (<div>I am happy</div>) : (<div>Scared is more accurate.</div>)}
       </div>
   )
 }
