@@ -6,9 +6,14 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  const happy = true;
+
   return (
     <>
       <div>
+        <h1>Hello, world!</h1>
+        {happy ? (<div>I am happy</div>) : (<div>I am not happy.</div>)}
+        
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
