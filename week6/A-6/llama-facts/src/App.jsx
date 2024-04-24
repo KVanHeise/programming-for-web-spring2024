@@ -1,5 +1,6 @@
 function App() {
 
+  const llamaTruth = "yes";
   const llamaFacts = [
     "llama fact 1",
     "llama fact 2",
@@ -11,7 +12,8 @@ function App() {
     <>
       <div>
         <h1>Llama Facts</h1>
-        {llamaFacts[0]}
+        <p>Here is a list of facts about llamas:</p>
+        <p>{llamaTruth === "yes" ? llamaFacts[2] : llamaFacts[3]}</p>
       </div>
     </>
   )
