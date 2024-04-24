@@ -10,6 +10,21 @@ function App() {
   return (
     <div>
       <h2>Colors</h2>
+      <Color
+        name={colorData[0].name}
+        desc={colorData[0].desc}
+        hex={colorData[0].hex}
+      />
+      <Color
+        name={colorData[1].name}
+        desc={colorData[1].desc}
+        hex={colorData[1].hex}
+      />
+      <Color
+        name={colorData[2].name}
+        desc={colorData[2].desc}
+        hex={colorData[2].hex}
+      />
     </div>
   )
 }

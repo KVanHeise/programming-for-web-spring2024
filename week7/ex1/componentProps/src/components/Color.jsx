@@ -1,9 +1,16 @@
-function Color() {
+import "./colors.css"
+
+function Color({name, desc, hex}) {
+    console.log(name)
     return (
-        <div>
-            <h1></h1>
-            <p></p>
-            <div></div>
+        <div className="colorCard">
+            <h1>{name}</h1>
+            <p>{desc}</p>
+            <div style={{
+                width: "25px",
+                height: "25px",
+                backgroundColor: hex
+            }}></div>
         </div>
     );
 }
