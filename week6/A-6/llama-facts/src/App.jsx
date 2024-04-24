@@ -11,7 +11,7 @@ function App() {
     <>
       <div>
         <h1>Llama Facts</h1>
-        {llamaFacts}
+        {llamaFacts[0]}
       </div>
     </>
   )
