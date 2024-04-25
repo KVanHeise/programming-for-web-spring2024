@@ -1,0 +1,10 @@
+.item-table {
+  margin:0 auto;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.item-table th, td {
+  padding: 20px;
+}
