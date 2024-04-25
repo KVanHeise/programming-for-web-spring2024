@@ -1,36 +1,43 @@
 import './App.css'
 import {useState} from "react";
 
+const imageList = [{
+  name: "Alpaca",
+  image: "./alpaca.png",
+  alt: "Alpaca photo"
+},
+{
+  name: "Llama",
+  image: "./llama.png",
+  alt: "Alpaca photo"
+}]
+
 function App() {
-  const [leftScore, setLeftScore] = useState(0)
-  const [rightScore, setRightScore] = useState(0)
+
+  const [index, setIndex] = useState(0);
+
+  function handleClick() {
+    setIndex(index + 1);
+  }
+
+  let camelid = imageList[index];
 
   return (
     <>
-      <h1>Camelids!</h1>
+      <h1>Alpaca VS Llama!</h1>
 
-      <img src="./alpaca.png" alt="Alpaca Photo"></img>
-      <img src="./llama.png" alt="Llama Photo"></img>
+      <img src={camelid.image} alt={camelid.alt}></img>
 
       <div>
-        left
-        <button onClick={() => {
-        setLeftScore(leftScore +1);
-        }}> Alpaca
+        Alpaca
+        <button onClick={handleClick}> Alpaca
         </button>
       </div>
 
       <div>
-        right
-        <button onClick={() => {
-        setRightScore(rightScore +1);
-        }}>Llama
+        Llama
+        <button onClick={handleClick}> Llama
         </button>
-      </div>
-
-      <div>
-        <h2>Scores</h2>
-        Left Score {leftScore} | Right Score {rightScore}
       </div>
     </>
   )
