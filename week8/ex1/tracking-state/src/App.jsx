@@ -7,13 +7,16 @@ function App() {
 
   return (
     <>
-      <h1>Solitare Clicky Game</h1>
+      <h1>Camelids!</h1>
+
+      <img src="./alpaca.png" alt="Alpaca Photo"></img>
+      <img src="./llama.png" alt="Llama Photo"></img>
 
       <div>
         left
         <button onClick={() => {
         setLeftScore(leftScore +1);
-        }}> Push Me!
+        }}> Alpaca
         </button>
       </div>
 
@@ -21,7 +24,7 @@ function App() {
         right
         <button onClick={() => {
         setRightScore(rightScore +1);
-        }}>No, Push Me!
+        }}>Llama
         </button>
       </div>
 
