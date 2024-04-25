@@ -10,7 +10,7 @@ function App() {
       powerset: "Druid, Circle of Stars",
       backstory: "Inheritor",
       isNPC: false,
-      image: "/castor.png"
+      image: "castor.png"
     },
     {
       name: "Dante",
@@ -19,7 +19,7 @@ function App() {
       powerset: "Fighter, Battle Master",
       backstory: "Mercinary Veteran",
       isNPC: false,
-      image: "/dante.png"
+      image: "dante.png"
     },
     {
       name: "Fluke",
@@ -28,7 +28,7 @@ function App() {
       powerset: "Wizard, School of Divination",
       backstory: "Hermit",
       isNPC: false,
-      image: "/fluke.png"
+      image: "fluke.png"
     },
     {
       name: "Ismark",
@@ -37,7 +37,7 @@ function App() {
       powerset: "None",
       backstory: "Barovian Noble",
       isNPC: true,
-      image: "/ismark.png"
+      image: "ismark.png"
     },
     {
       name: "Mirna",
@@ -46,7 +46,7 @@ function App() {
       powerset: "Cleric, Life Domain",
       backstory: "Acolyte",
       isNPC: false,
-      image: "/mirna.png"
+      image: "mirna.png"
     },
   ]
 
