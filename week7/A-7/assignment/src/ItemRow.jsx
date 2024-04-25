@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 import "./ItemRow.css";
 
-export function ItemRow({name, colors, theme, hasFinished, achievementsDone, image, odd}) {
+export function ItemRow({name, species, powerset, backstory, isNPC, image, odd}) {
     return (
         <tr className={odd && "odd"}>
-            <td style={{fontWeight: hasFinished ? "bold" : "normal"}}>{name}</td>
-            <td>{colors.join(", ")}</td>
-            <td>{theme}</td>
-            <td>{hasFinished ? "yes" : "no"}</td>
-            <td>{achievementsDone ? "yes" : "no"}</td>
+            <td style={{fontWeight: isNPC ? "normal" : "bold"}}>{name}</td>
+            <td>{species}</td>
+            <td>{powerset}</td>
+            <td>{backstory}</td>
+            <td style={{fontWeight: isNPC ? "bold" : "normal", color: isNPC ? "white" : "black"}}>{isNPC ? "Yes" : "No"}</td>
             <td><img src={image} alt={name}></img></td>
         </tr>
     )

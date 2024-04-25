@@ -4,94 +4,85 @@ import { ItemRow } from "./ItemRow";
 function App() {
   const collectionItems = [
     {
-      name: "Item Name 1",
-      colors: ["blue", "green", "black"],
-      theme: "Fancy",
-      hasFinished: true,
-      achievementsDone: false,
-      image: "/image1.png"
+      name: "Castor",
+      player: "Shayne",
+      species: "Human",
+      powerset: "Druid, Circle of Stars",
+      backstory: "Inheritor",
+      isNPC: false,
+      image: "/castor.png"
     },
     {
-      name: "Item Name 2",
-      colors: ["blue", "green", "white"],
-      theme: "Crazy",
-      hasFinished: false,
-      achievementsDone: true,
-      image: "/image2.png"
+      name: "Dante",
+      player: "Eric",
+      species: "Human",
+      powerset: "Fighter, Battle Master",
+      backstory: "Mercinary Veteran",
+      isNPC: false,
+      image: "/dante.png"
     },
     {
-      name: "Item Name 3",
-      colors: ["red", "purple", "black", "blue", "silver"],
-      theme: "Lacey",
-      hasFinished: true,
-      achievementsDone: true,
-      image: "/image3.png"
+      name: "Fluke",
+      player: "Shane",
+      species: "Human",
+      powerset: "Wizard, School of Divination",
+      backstory: "Hermit",
+      isNPC: false,
+      image: "/fluke.png"
     },
     {
-      name: "Item Name 4",
-      colors: ["red", "purple", "black", "blue", "silver"],
-      theme: "Wacky",
-      hasFinished: false,
-      achievementsDone: true,
-      image: "/image4.png"
+      name: "Ismark",
+      player: "Kyrin",
+      species: "Human",
+      powerset: "None",
+      backstory: "Barovian Noble",
+      isNPC: true,
+      image: "/ismark.png"
     },
     {
-      name: "Item Name 5",
-      colors: ["red", "purple", "black", "blue", "lavender", "silver"],
-      theme: "Romance",
-      hasFinished: false,
-      achievementsDone: true,
-      image: "/image5.png"
-    },
-    {
-      name: "Item Name 6",
-      colors: ["red", "purple", "black", "blue", "silver"],
-      theme: "Horror",
-      hasFinished: true,
-      achievementsDone: false,
-      image: "/image6.png"
-    },
-    {
-      name: "Item Name 7",
-      colors: ["red", "purple", "black", "blue", "silver"],
-      theme: "Comedy",
-      hasFinished: true,
-      achievementsDone: true,
-      image: "/image7.png"
+      name: "Mirna",
+      player: "Coley",
+      species: "Half-Wood Elf",
+      powerset: "Cleric, Life Domain",
+      backstory: "Acolyte",
+      isNPC: false,
+      image: "/mirna.png"
     },
   ]
 
   return (
     <>
-      <h1>My Collection</h1>
-      <p>Show decks here.</p>
-      <table className="item-table">
-        <thead>
-          <tr>
-            <th>Item Name</th>
-            <th>Colors</th>
-            <th>Theme</th>
-            <th>Has Won?</th>
-            <th>Achievements</th>
-            <th>Image</th>
-          </tr>
-        </thead>
-        <tbody>
-          {collectionItems.map((item, index) => {
-            return (
-            <ItemRow
-            key={item.image}
-            odd={index % 2 === 0}
-            name={item.name}
-            colors={item.colors}
-            image={item.image}
-            theme={item.theme}
-            hasFinished={item.hasFinished}
-            achievementsDone={item.achievementsDone}
-            />)
-          })}
-        </tbody>
-      </table>
+      <h1>Curse of Strahd</h1>
+      <div className="page-wrap">
+        <h2>Active Character Roster</h2>
+        <table className="character-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Species</th>
+              <th>Class</th>
+              <th>Backstory</th>
+              <th>NPC?</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            {collectionItems.map((item, index) => {
+              return (
+              <ItemRow
+              key={item.image}
+              odd={index % 2 === 0}
+              name={item.name}
+              species={item.species}
+              powerset={item.powerset}
+              backstory={item.backstory}
+              isNPC={item.isNPC}
+              image={item.image}
+              />)
+            })}
+          </tbody>
+        </table>
+    </div>
     </>
   )
 }
