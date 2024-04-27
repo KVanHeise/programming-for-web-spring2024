@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import "./App.css";
 import Masthead from "./Masthead/Masthead";
+import ItemCard from "./ItemCard/ItemCard";
 
 function App() {
   const [decks, setDecks] = useState([
@@ -64,6 +65,11 @@ function App() {
       <div className="collection">
         {/* card map goes here */}
         {/* use ItemCard component in Loop */}
+        {decks.map((characterProfile) => {
+          return (
+            <ItemCard key={characterProfile.id}/>
+          )
+        })}
       </div>
     </div>
   )
