@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import "./App.css";
-import { ItemRow } from "./ItemRow";
+import Masthead from "./Masthead/Masthead";
 
 function App() {
   const [decks, setDecks] = useState([
@@ -60,6 +60,7 @@ function App() {
   return (
     <div className="page">
       {/* Masthead goes here */}
+      <Masthead />
       <div className="collection">
         {/* card map goes here */}
         {/* use ItemCard component in Loop */}
