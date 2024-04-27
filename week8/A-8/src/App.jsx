@@ -2,7 +2,7 @@ import "./App.css";
 import { ItemRow } from "./ItemRow";
 
 function App() {
-  const collectionItems = [
+  const [decks, setDecks] = useState([
     {
       name: "Castor",
       player: "Shayne",
@@ -10,7 +10,8 @@ function App() {
       powerset: "Druid, Circle of Stars",
       backstory: "Inheritor",
       isNPC: false,
-      image: "castor.png"
+      image: "castor.png",
+      id: 1
     },
     {
       name: "Dante",
@@ -19,7 +20,8 @@ function App() {
       powerset: "Fighter, Battle Master",
       backstory: "Mercinary Veteran",
       isNPC: false,
-      image: "dante.png"
+      image: "dante.png",
+      id: 2
     },
     {
       name: "Fluke",
@@ -28,7 +30,8 @@ function App() {
       powerset: "Wizard, School of Divination",
       backstory: "Hermit",
       isNPC: false,
-      image: "fluke.png"
+      image: "fluke.png",
+      id: 3
     },
     {
       name: "Ismark",
@@ -37,7 +40,8 @@ function App() {
       powerset: "None",
       backstory: "Barovian Noble",
       isNPC: true,
-      image: "ismark.png"
+      image: "ismark.png",
+      id: 4
     },
     {
       name: "Mirna",
@@ -46,44 +50,19 @@ function App() {
       powerset: "Cleric, Life Domain",
       backstory: "Acolyte",
       isNPC: false,
-      image: "mirna.png"
+      image: "mirna.png",
+      id: 5
     },
-  ]
+  ]);
 
   return (
-    <>
-      <h1>Curse of Strahd</h1>
-      <div className="page-wrap">
-        <h2>Active Character Roster</h2>
-        <table className="character-table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Species</th>
-              <th>Class</th>
-              <th>Backstory</th>
-              <th>NPC?</th>
-              <th>Image</th>
-            </tr>
-          </thead>
-          <tbody>
-            {collectionItems.map((item, index) => {
-              return (
-              <ItemRow
-              key={item.image}
-              odd={index % 2 === 0}
-              name={item.name}
-              species={item.species}
-              powerset={item.powerset}
-              backstory={item.backstory}
-              isNPC={item.isNPC}
-              image={item.image}
-              />)
-            })}
-          </tbody>
-        </table>
+    <div className="page">
+      {/* Masthead goes here */}
+      <div className="collection">
+        {/* card map goes here */}
+        {/* use ItemCard component in Loop */}
+      </div>
     </div>
-    </>
   )
 }
 
