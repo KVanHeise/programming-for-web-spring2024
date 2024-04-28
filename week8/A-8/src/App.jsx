@@ -60,11 +60,11 @@ function App() {
 
   function deleteCard() {
     console.log("delete me");
-  };
+  }
 
   function duplicateCard () {
     console.log("duplicate me");
-  };
+  }
 
   return (
     <div className="page">

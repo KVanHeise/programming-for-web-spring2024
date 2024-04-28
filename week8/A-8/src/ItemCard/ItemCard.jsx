@@ -1,5 +1,7 @@
 import propTypes from "prop-types";
 import "./ItemCard.css";
+import trash from "../assets/icons/delete.png";
+import copy from "../assets/icons/copy.png";
 
 export default function ItemCard({
 
@@ -45,7 +47,7 @@ export default function ItemCard({
                 Played by: {player}
             </div>
 
-            <div className="action"><a href=""><img/></a><a href=""><img/></a></div>
+            <div className="action"><a href=""><img src={trash}/></a><a href=""><img src={copy}/></a></div>
 
         </div>
     )
@@ -60,4 +62,6 @@ ItemCard.propTypes = {
     isNPC: propTypes.bool,
     image: propTypes.string,
     id: propTypes.string,
+    duplicateFn: propTypes.func,
+    deleteFn: propTypes.func
 }
