@@ -1,2 +1,2 @@
-# Week 7 Assignment - Show and Tell Collection
+# Week 8 Assignment - Show and Tell Collection part 2
 ## Kyrin Van Heise - Spring 2024
