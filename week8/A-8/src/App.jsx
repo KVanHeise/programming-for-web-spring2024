@@ -7,7 +7,7 @@ import ItemCard from "./ItemCard/ItemCard";
 function App() {
   const [decks, setDecks] = useState([
     {
-      name: "Castor",
+      charName: "Castor",
       player: "Shayne",
       species: "Human",
       powerset: "Druid, Circle of Stars",
@@ -17,7 +17,7 @@ function App() {
       id: 1
     },
     {
-      name: "Dante",
+      charName: "Dante",
       player: "Eric",
       species: "Human",
       powerset: "Fighter, Battle Master",
@@ -27,7 +27,7 @@ function App() {
       id: 2
     },
     {
-      name: "Fluke",
+      charName: "Fluke",
       player: "Shane",
       species: "Human",
       powerset: "Wizard, School of Divination",
@@ -37,7 +37,7 @@ function App() {
       id: 3
     },
     {
-      name: "Ismark",
+      charName: "Ismark",
       player: "Kyrin",
       species: "Human",
       powerset: "None",
@@ -47,7 +47,7 @@ function App() {
       id: 4
     },
     {
-      name: "Mirna",
+      charName: "Mirna",
       player: "Coley",
       species: "Half-Wood Elf",
       powerset: "Cleric, Life Domain",
@@ -67,7 +67,7 @@ function App() {
         {/* use ItemCard component in Loop */}
         {decks.map((characterProfile) => {
           return (
-            <ItemCard key={characterProfile.id}/>
+            <ItemCard key={characterProfile.id} {...characterProfile}/>
           )
         })}
       </div>
