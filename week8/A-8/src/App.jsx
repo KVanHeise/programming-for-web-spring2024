@@ -14,7 +14,7 @@ function App() {
       backstory: "Inheritor",
       isNPC: false,
       image: "castor.png",
-      id: 1
+      id: "1"
     },
     {
       charName: "Dante",
@@ -24,7 +24,7 @@ function App() {
       backstory: "Mercinary Veteran",
       isNPC: false,
       image: "dante.png",
-      id: 2
+      id: "2"
     },
     {
       charName: "Fluke",
@@ -34,7 +34,7 @@ function App() {
       backstory: "Hermit",
       isNPC: false,
       image: "fluke.png",
-      id: 3
+      id: "3"
     },
     {
       charName: "Ismark",
@@ -44,7 +44,7 @@ function App() {
       backstory: "Barovian Noble",
       isNPC: true,
       image: "ismark.png",
-      id: 4
+      id: "4"
     },
     {
       charName: "Mirna",
@@ -54,9 +54,17 @@ function App() {
       backstory: "Acolyte",
       isNPC: false,
       image: "mirna.png",
-      id: 5
+      id: "5"
     },
   ]);
+
+  function deleteCard() {
+    console.log("delete me");
+  };
+
+  function duplicateCard () {
+    console.log("duplicate me");
+  };
 
   return (
     <div className="page">
@@ -67,7 +75,11 @@ function App() {
         {/* use ItemCard component in Loop */}
         {decks.map((characterProfile) => {
           return (
-            <ItemCard key={characterProfile.id} {...characterProfile}/>
+            <ItemCard
+            key={characterProfile.id}
+            deleteFn={deleteCard}
+            duplicateFn={duplicateCard}
+            {...characterProfile}/>
           )
         })}
       </div>
