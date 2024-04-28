@@ -1,10 +1,27 @@
+body {
+  background-color: darkred;
+  margin: 0;
+}
+
 .collection {
   display: flex;
   flex-direction: row;
   flex-wrap:wrap;
+  justify-content: center;
 }
 
 .page {
   max-width: 1237px;
   margin: 0 auto;
+  background-color: black;
+  padding-bottom: 200px;
+}
+
+h1 {
+  font-family: "Rouge Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  padding-top:10px;
+  color:white;
 }

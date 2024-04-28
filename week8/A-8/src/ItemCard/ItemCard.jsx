@@ -4,9 +4,7 @@ import trash from "../assets/icons/delete.png";
 import copy from "../assets/icons/copy.png";
 
 export default function ItemCard({
-
     charName,
-    player,
     species,
     powerset,
     backstory,
@@ -18,13 +16,21 @@ export default function ItemCard({
 })  {
     return (
         <div className="characterCard">
+            <div className="characterName">
+                {charName}
+            </div>
+            
+            {isNPC ?
+                <div className="isNPC">
+                    <p>Non-Player Character</p>
+                </div> :
+                <div className="isNPC">
+                    <p>Player Character</p>
+                </div>
+            }
 
             <div className="cardImg">
                 <img src={image} alt={"characterImage"} />
-            </div>
-
-            <div className="characterName">
-                {charName}
             </div>
 
             <div className="species">
@@ -39,15 +45,16 @@ export default function ItemCard({
                 {backstory}
             </div>
 
-            {isNPC && <div className="isNPC">
-                <p>This character is an NPC.</p>
-            </div>}
-
-            <div className="playerName">
-                Played by: {player}
+            <div className="action">
+                <a href="#" onClick={(evt) => {
+                    evt.preventDefault();
+                    deleteFn(id)
+                }}><img src={trash}/></a>
+                <a href="#" onClick={(evt) => {
+                    evt.preventDefault();
+                    duplicateFn(id)
+                }}><img src={copy}/></a>
             </div>
-
-            <div className="action"><a href=""><img src={trash}/></a><a href=""><img src={copy}/></a></div>
 
         </div>
     )
@@ -55,7 +62,6 @@ export default function ItemCard({
 
 ItemCard.propTypes = {
     charName: propTypes.string,
-    player: propTypes.string,
     species: propTypes.string,
     powerset: propTypes.string,
     backstory: propTypes.string,

@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./App.css";
 import Masthead from "./Masthead/Masthead";
 import ItemCard from "./ItemCard/ItemCard";
+import {nanoid} from "nanoid";
 
 function App() {
   const [decks, setDecks] = useState([
@@ -58,12 +59,21 @@ function App() {
     },
   ]);
 
-  function deleteCard() {
-    console.log("delete me");
+  function deleteCard(id) {
+    console.log("delete me", id);
+    const updatedArray = decks.filter((characterDeck) => {
+      return characterDeck.id !== id; //will skip item with matching id
+    })
+    setDecks(updatedArray)
   }
 
-  function duplicateCard () {
-    console.log("duplicate me");
+  function duplicateCard (id) {
+    console.log("duplicate me", id);
+    const matchingDeck = decks.find((characterDeck) => {
+      return characterDeck.id === id
+    });
+    const updatedDeck = {...matchingDeck, id: nanoid()}
+    setDecks([...decks, updatedDeck])
   }
 
   return (
@@ -73,13 +83,13 @@ function App() {
       <div className="collection">
         {/* card map goes here */}
         {/* use ItemCard component in Loop */}
-        {decks.map((characterProfile) => {
+        {decks.map((characterDeck) => {
           return (
             <ItemCard
-            key={characterProfile.id}
+            key={characterDeck.id}
             deleteFn={deleteCard}
             duplicateFn={duplicateCard}
-            {...characterProfile}/>
+            {...characterDeck}/>
           )
         })}
       </div>
