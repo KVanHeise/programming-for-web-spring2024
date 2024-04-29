@@ -69,6 +69,10 @@ export function AlpacaForm () {
     ]
     
       const [formObject, setFormObject] = useState(initialFormData);
+      const [errorObject, setErrorObject] = useState({
+        firstName: "",
+        country: ""
+      })
     
       function changeHandler(event){
         console.log(event.target.value);
@@ -98,6 +102,22 @@ export function AlpacaForm () {
           }
         }))
       }}
+
+      function validateErrors(event) {
+        if(!event.target.value) {
+          setErrorObject({
+            ...errorObject,
+            firstName: "This field is requried.",
+            country: "This field is required."
+          })
+        } else {
+          setErrorObject({
+            ...errorObject,
+            firstName: "",
+            country: ""
+          })
+        }
+      }
     
       function handleSubmit(event){
         console.log("submit triggered")
@@ -110,7 +130,7 @@ export function AlpacaForm () {
       <fieldset>
         <legend>Personal Information</legend>
           <div className="formGroup">
-            <label htmlFor="firstName">
+            <label htmlFor="firstName" className="required">
               First Name
             </label>
             <input 
@@ -119,7 +139,13 @@ export function AlpacaForm () {
               id="firstName"
               value={formObject.firstName}
               onChange={changeHandler}
+              onBlur={validateErrors}
             />
+            {errorObject.firstName && (
+              <>
+              <br />
+              <small>{errorObject.firstName}</small></>
+            )}
           </div>
           <div className="formgroup">
             <label htmlFor="lastName">
@@ -164,13 +190,20 @@ export function AlpacaForm () {
             </select>
           </div>
           <div className="formgroup">
-            <label htmlFor="country">Country</label>
+            <label htmlFor="country" className="required">Country</label>
             <input
               type="text"
               name="country"
               id="country"
               value={formObject.country}
-              onChange={changeHandler} />
+              onChange={changeHandler}
+              onBlur={validateErrors}
+              />
+                {errorObject.country && (
+                <>
+                <br />
+                <small>{errorObject.country}</small></>
+                )}
           </div>
       </fieldset>
       
@@ -223,7 +256,7 @@ export function AlpacaForm () {
             </label>
         </div>
       </fieldset>
-      <button type="submit">
+      <button type="submit" disabled={errorObject.firstName || errorObject.country}>
         Sign me up!
       </button>
      </form>
