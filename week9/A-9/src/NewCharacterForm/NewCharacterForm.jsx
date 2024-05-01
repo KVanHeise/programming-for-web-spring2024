@@ -46,7 +46,7 @@ export function NewCharacterForm() {
     function changeHandler(event) {
         if(event.target.name === "isNPC") {
             const needsBoolean = ["isNPC"];
-            const updatedTarget = needsBoolean.includes(event.target.is) ? !!event.target.value : event.target.value;
+            const updatedTarget = needsBoolean.includes(event.target.id) ? !!event.target.value : event.target.value;
 
             setNewCard((prevCard) => {
                 return {
