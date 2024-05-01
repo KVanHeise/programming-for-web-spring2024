@@ -44,10 +44,6 @@ export function NewCharacterForm() {
     }
 
     function changeHandler(event) {
-        if(event.target.name === "isNPC") {
-            const needsBoolean = ["isNPC"];
-            const updatedTarget = needsBoolean.includes(event.target.id) ? !!event.target.value : event.target.value;
-
             setNewCard((prevCard) => {
                 return {
                     ...prevCard,
@@ -55,16 +51,16 @@ export function NewCharacterForm() {
                 }
             })
         }
-    }
+    
     function submitHandler(event) {
         event.preventDefault();
         console.log({newCard});
         if(validateForm(newCard)) {
-            // send card to App
+        //     // send card to App
 
-            //reset values
+        //     //reset values
             setNewCard(initialCardSetting)
-        }
+        // }
     }
 
     return (
@@ -200,4 +196,4 @@ export function NewCharacterForm() {
             </button>
         </form>
     )
-}
+}}
