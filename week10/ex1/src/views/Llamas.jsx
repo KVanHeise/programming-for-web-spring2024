@@ -15,7 +15,7 @@ export function Llamas() {
 
                 <p>
                 The genera Lama and Vicugna are, with the two species of true camels, the sole existing representatives of a very
-                distinct section of the Artiodactyla or even-toed ungulates, called Tylopoda, or "bump-footed", from the peculiar
+                distinct section of the Artiodactyla or even-toed ungulates, called Tylopoda, or &quot;bump-footed&quot;, from the peculiar
                 bumps
                 on the soles of their feet. The Tylopoda consist of a single family, the Camelidae, and shares the order Artiodactyla
                 with the Suina (pigs), the Tragulina (chevrotains), the Pecora (ruminants), and the Whippomorpha (hippos and

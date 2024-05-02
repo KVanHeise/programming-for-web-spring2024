@@ -1,4 +1,5 @@
-import alpacaPic from "../assets/alpacas.png"
+import {alpacaPic} from "../assets/alpacas.png"
+
 export function Alpaca() {
     return (
         <>
@@ -15,7 +16,7 @@ export function Alpaca() {
                 Northern Chile at an altitude of 3,500 to 5,000 metres (11,000 to 16,000 feet) above sea level. Alpacas are
                 considerably smaller than llamas, and unlike llamas, they were not bred to be working animals but were bred
                 specifically
-                for their fiber. Alpaca fiber is used for making knitted and woven items, similar to sheep's wool. These items include
+                for their fiber. Alpaca fiber is used for making knitted and woven items, similar to sheeps wool. These items include
                 blankets, sweaters, hats, gloves, scarves, a wide variety of textiles and ponchos in South America, and sweaters,
                 socks,
                 coats and bedding in other parts of the world. The fiber comes in more than 52 natural colors as classified in Peru,
@@ -28,7 +29,7 @@ export function Alpaca() {
                 strength and dominance.
                 </p>
 
-                <p>In the textile industry, "alpaca" primarily refers to the hair of Peruvian alpacas, but more broadly it refers to a
+                <p>In the textile industry, &quot;alpaca&quot; primarily refers to the hair of Peruvian alpacas, but more broadly it refers to a
                 style of fabric originally made from alpaca hair, such as mohair, Icelandic sheep wool, or even high-quality wool from
                 other breeds of sheep. In trade, distinctions are made between alpacas and the several styles of mohair and luster.
                 </p>
