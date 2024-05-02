@@ -1,6 +1,7 @@
 import {useState} from "react";
 import propTypes from "prop-types";
 import "./NewCharacterForm.css";
+import clxs from "clsx";
 
 export function NewCharacterForm({addCardFn}) {
     const initialCardSetting = {
@@ -75,7 +76,7 @@ export function NewCharacterForm({addCardFn}) {
                     Character Details
                 </legend>
 
-                <div className="form-group">
+                <div className={{"form group": true, "error" : errorObj.charName}}>
                     <label htmlFor="charName" className="required">
                         Character Name
                     </label>
@@ -100,7 +101,7 @@ export function NewCharacterForm({addCardFn}) {
                         {errorObj.charName && (
                             <>
                             <br/>
-                            <small>{errorObj.charName}</small>
+                            <small className="error feedback">{errorObj.charName}</small>
                             </>
                         )}
                 </div>
@@ -157,7 +158,7 @@ export function NewCharacterForm({addCardFn}) {
                     />
                 </div>
 
-                <div className="form-group" >
+                <div className={{"form-group": true, "error": errorObj.image}} >
                     <label htmlFor="image" className="required">
                         Image URL
                     </label>
@@ -181,7 +182,7 @@ export function NewCharacterForm({addCardFn}) {
                     {errorObj.image && (
                         <>
                         <br/>
-                        <small>{errorObj.image}</small>
+                        <small className="error feedback">{errorObj.image}</small>
                         </>
                     )}
                 </div>
