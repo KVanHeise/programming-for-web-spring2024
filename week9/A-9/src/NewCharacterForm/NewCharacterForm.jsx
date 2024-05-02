@@ -44,13 +44,17 @@ export function NewCharacterForm() {
     }
 
     function changeHandler(event) {
-            setNewCard((prevCard) => {
-                return {
-                    ...prevCard,
-                    [event.target.name]: event.target.value
-                }
-            })
-        }
+        const needsBoolean = ["isNPC"];
+        const updatedTarget = needsBoolean.includes(event.target.id) ? Boolean(event.target.value) : event.target.value;
+
+        setNewCard((prevCard) => {
+            return {
+                ...prevCard,
+                [event.target.name]: event.target.value,
+                [event.target.name]: updatedTarget
+            }
+        })
+    }
     
     function submitHandler(event) {
         event.preventDefault();
@@ -69,10 +73,12 @@ export function NewCharacterForm() {
                 <legend>
                     Character Details
                 </legend>
+
                 <div className="form-group">
                     <label htmlFor="charName">
                         Character Name
                     </label>
+
                     <input
                         type="text"
                         name="charName"
@@ -97,6 +103,7 @@ export function NewCharacterForm() {
                             </>
                         )}
                 </div>
+
                 <div className="form-group">
                     <label htmlFor="player">
                         Player Name
@@ -109,6 +116,7 @@ export function NewCharacterForm() {
                         onChange={changeHandler}
                     />
                 </div>
+
                 <div className="form-group">
                     <label htmlFor="species">
                         Species
@@ -121,6 +129,7 @@ export function NewCharacterForm() {
                         onChange={changeHandler}
                     />
                 </div>
+
                 <div className="form-group">
                     <label htmlFor="powerset">
                         Class
@@ -133,6 +142,7 @@ export function NewCharacterForm() {
                         onChange={changeHandler}
                     />
                 </div>
+
                 <div className="form-group">
                     <label htmlFor="backstory">
                         Background
@@ -145,6 +155,7 @@ export function NewCharacterForm() {
                         onChange={changeHandler}
                     />
                 </div>
+
                 <div className="form-group">
                     <label htmlFor="image">
                         Image URL
@@ -178,18 +189,21 @@ export function NewCharacterForm() {
                 <legend>
                     Collection Details
                 </legend>
+
                 <div className="form-group">
-                    <label htmlFor="">
+                    <label htmlFor="isNPC">
                         NPC
                         <input
                             type="checkbox"
                             name="isNPC"
                             id="isNPC"
+                            onChange={changeHandler}
                             value={newCard.isNPC}
-                            onChange={changeHandler}>
+                            >
                         </input>
                     </label>
                 </div>
+
             </fieldset>
             <button type="submit">
                 Add Character
