@@ -3,13 +3,15 @@ body {
     margin: 0;
   }
   
-  .page {
+  .card-info-page {
     max-width: 1237px;
     margin: 0 auto;
     background-color: black;
+    padding-top: 30px;
+    padding-bottom: 50px;
   }
   
-  h1 {
+  .card-info-page h1 {
     font-family: "Rouge Script", cursive;
     font-weight: 400;
     font-style: normal;
@@ -19,16 +21,36 @@ body {
     text-align: center;
   }
   
-  p {
+  .card-info-page p {
     text-align: center;
     color: white;
     margin: 0 auto;
+    padding: 10px;
   }
 
-  img {
-    margin: 0, auto;
+  .fullprofile-img {
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  p.return-to-home {
+    margin: 50px;
+    padding: 25px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    border-top: 1px solid white;
+  }
+
+  .return-to-home:visited {
+    color: white;
+  }
+
+  .return-to-home:hover {
+    color: darkred;
   }
