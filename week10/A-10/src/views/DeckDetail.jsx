@@ -14,13 +14,15 @@ export function DeckDetail({data}) {
 
         <img src={selectedDeck.image} alt={selectedDeck.charName} className="fullprofile-img" />
 
-        <p>Species: {selectedDeck.species}</p>
+        <div className="character-details">
+            <p>Species: {selectedDeck.species}</p>
 
-        <p>Class {selectedDeck.powerset}</p>
+            <p>Class {selectedDeck.powerset}</p>
 
-        <p>Background: {selectedDeck.backstory}</p>
-
-        <p className="return-to-home"><Link to="/">Return to Home</Link></p>
+            <p>Background: {selectedDeck.backstory}</p>
+        </div>
+        
+        <Link to="/" className="return-to-home">Return to Home</Link>
 
         </div>
     )
