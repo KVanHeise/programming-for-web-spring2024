@@ -9,7 +9,6 @@ import {nanoid} from "nanoid";
 
 export function Home() {
     const [decks, setDecks] = useState(deckData);
-  console.log(decks);
 
   function deleteCard(id) {
     console.log("delete me", id);
