@@ -2,14 +2,13 @@ import {Link, Route, Routes} from "react-router-dom"
 import {Home} from "./views/Home"
 import {Llamas} from "./views/Llamas"
 import {Alpaca} from "./views/Alpaca"
-
-import './App.css'
+import './index.css'
 
 function App() {
   return (
     <>
      {/* Navigation here */}
-     <ul>
+     <ul className="navigation">
       <li><Link to="/">Home</Link></li>
       <li><Link to="/llamas">Llamas</Link></li>
       <li><Link to="/alpacas">Alpacas</Link></li>

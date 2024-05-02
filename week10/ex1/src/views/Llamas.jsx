@@ -1,8 +1,12 @@
+import llamaPic from "../assets/llamas.png";
+
 export function Llamas() {
     return (
-        <>
+        <div className="llama-page">
             <h1>Llamas</h1>
-                {/* <!-- please include a llama picture here! --> */}
+                <div className="photo-box">
+                <img src={llamaPic} alt="llamaPhoto" />
+                </div>
                 <p>Lamoids, or llamas (as they are more generally known as a group), consist of the vicuña (Vicugna vicugna, prev. Lama
                 vicugna), guanaco (Lama guanicoe), Suri alpaca, and Huacaya alpaca (Vicugna pacos, prev. Lama guanicoe pacos), and the
                 domestic llama (Lama glama). Guanacos and vicuñas live in the wild, while llamas and alpacas exist only as
@@ -52,6 +56,6 @@ export function Llamas() {
                 where they evolved further. Meanwhile, North American camelids died out at the end of the Pleistocene.
                 </p>
                 <p><cite>- from <a href="https://en.wikipedia.org/wiki/Llama" target="_blank">Wikipedia</a></cite></p>
-            </>
+            </div>
     );
 }
