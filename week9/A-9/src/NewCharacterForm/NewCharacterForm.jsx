@@ -1,8 +1,8 @@
 import {useState} from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import "./NewCharacterForm.css";
 
-export function NewCharacterForm(addCardFn) {
+export function NewCharacterForm({addCardFn}) {
     const initialCardSetting = {
         charName: "",
         player: "",
@@ -214,5 +214,5 @@ export function NewCharacterForm(addCardFn) {
 }
 
 NewCharacterForm.propTypes = {
-    addCardFn: PropTypes.func.isRequired
+    addCardFn: propTypes.func.isRequired
 }

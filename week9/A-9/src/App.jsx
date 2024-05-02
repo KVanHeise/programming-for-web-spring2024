@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import "./App.css";
 import Masthead from "./Masthead/Masthead";
 import ItemCard from "./ItemCard/ItemCard";
