@@ -77,6 +77,14 @@ function App() {
     setDecks([...decks, updatedDeck])
   }
 
+  function addCard(newCard) {
+    const cardWithId = {
+      ...newCard,
+      id: nanoid()
+    }
+    setDecks([...decks, cardWithId])
+  }
+
   return (
     <div className="page">
       {/* Masthead goes here */}
@@ -95,7 +103,7 @@ function App() {
         })}
       </div>
       <hr />
-      <NewCharacterForm />
+      <NewCharacterForm addCardFn={addCard} />
     </div>
   )
 }

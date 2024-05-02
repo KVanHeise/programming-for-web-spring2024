@@ -1,7 +1,8 @@
 import {useState} from "react";
+import PropTypes from "prop-types";
 import "./NewCharacterForm.css";
 
-export function NewCharacterForm() {
+export function NewCharacterForm(addCardFn) {
     const initialCardSetting = {
         charName: "",
         player: "",
@@ -61,7 +62,7 @@ export function NewCharacterForm() {
         console.log({newCard});
         if (validateForm(newCard)) {
         //     // send card to App
-
+            addCardFn(newCard);
         //     //reset values
             setNewCard(initialCardSetting)
         // }
@@ -210,4 +211,8 @@ export function NewCharacterForm() {
             </button>
         </form>
     )
+}
+
+NewCharacterForm.propTypes = {
+    addCardFn: PropTypes.func.isRequired
 }
