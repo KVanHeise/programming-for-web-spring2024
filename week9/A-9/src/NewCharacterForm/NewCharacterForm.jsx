@@ -75,7 +75,7 @@ export function NewCharacterForm() {
                 </legend>
 
                 <div className="form-group">
-                    <label htmlFor="charName">
+                    <label htmlFor="charName" className="required">
                         Character Name
                     </label>
 
@@ -156,8 +156,8 @@ export function NewCharacterForm() {
                     />
                 </div>
 
-                <div className="form-group">
-                    <label htmlFor="image">
+                <div className="form-group" >
+                    <label htmlFor="image" className="required">
                         Image URL
                     </label>
                     <input

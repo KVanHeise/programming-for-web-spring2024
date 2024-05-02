@@ -4,3 +4,16 @@
     padding: 20px;
     color:white;
 }
+
+.form-group {
+    padding-bottom: 5px;
+}
+
+label {
+    padding-right: 10px;
+}
+
+label.required::before {
+    content: "* ";
+    color: red;
+  }
