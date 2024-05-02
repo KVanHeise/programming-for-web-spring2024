@@ -1,5 +1,5 @@
 body {
-  background-color: darkred;
+  background-color: rgb(53, 7, 7);
   margin: 0;
 }
 
@@ -14,14 +14,25 @@ body {
   max-width: 1237px;
   margin: 0 auto;
   background-color: black;
-  padding-bottom: 200px;
 }
 
-h1 {
+h1, h2 {
   font-family: "Rouge Script", cursive;
   font-weight: 400;
   font-style: normal;
   font-size: 50px;
   padding-top:10px;
   color:white;
+  text-align: center;
+}
+
+footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: white;
+  margin: 0 auto;
+}
+
+footer p {
+  text-align: center;
 }

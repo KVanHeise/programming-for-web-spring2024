@@ -1,7 +1,6 @@
 import {useState} from "react";
 import propTypes from "prop-types";
 import "./NewCharacterForm.css";
-import clxs from "clsx";
 
 export function NewCharacterForm({addCardFn}) {
     const initialCardSetting = {
@@ -76,7 +75,7 @@ export function NewCharacterForm({addCardFn}) {
                     Character Details
                 </legend>
 
-                <div className={{"form group": true, "error" : errorObj.charName}}>
+                <div className={{"form group": true, "error": errorObj.charName}}>
                     <label htmlFor="charName" className="required">
                         Character Name
                     </label>
@@ -101,7 +100,7 @@ export function NewCharacterForm({addCardFn}) {
                         {errorObj.charName && (
                             <>
                             <br/>
-                            <small className="error feedback">{errorObj.charName}</small>
+                            <small className="error-feedback">{errorObj.charName}</small>
                             </>
                         )}
                 </div>
@@ -117,6 +116,20 @@ export function NewCharacterForm({addCardFn}) {
                         value={newCard.player}
                         onChange={changeHandler}
                     />
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="isNPC">
+                        Check if NPC:
+                        <input
+                            type="checkbox"
+                            name="isNPC"
+                            id="isNPC"
+                            onChange={changeHandler}
+                            checked={newCard.isNPC}
+                            >
+                        </input>
+                    </label>
                 </div>
 
                 <div className="form-group">
@@ -182,33 +195,14 @@ export function NewCharacterForm({addCardFn}) {
                     {errorObj.image && (
                         <>
                         <br/>
-                        <small className="error feedback">{errorObj.image}</small>
+                        <small className="error-feedback">{errorObj.image}</small>
                         </>
                     )}
                 </div>
             </fieldset>
-            <fieldset>
-                <legend>
-                    Collection Details
-                </legend>
-
-                <div className="form-group">
-                    <label htmlFor="isNPC">
-                        This is an NPC:
-                        <input
-                            type="checkbox"
-                            name="isNPC"
-                            id="isNPC"
-                            onChange={changeHandler}
-                            value={newCard.isNPC}
-                            >
-                        </input>
-                    </label>
-                </div>
-
-            </fieldset>
+            <p className="required">Required Fields</p>
             <button type="submit" disabled={errorObj.charName || errorObj.image}>
-                Add Character
+                Welcome, Adventurer!
             </button>
         </form>
     )

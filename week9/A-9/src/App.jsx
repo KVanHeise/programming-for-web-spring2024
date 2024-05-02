@@ -102,7 +102,12 @@ function App() {
         })}
       </div>
       <hr />
+      <h2>Add Character</h2>
       <NewCharacterForm addCardFn={addCard} />
+      <footer>
+      <hr />
+        <p>Kyrin Van Heise  |  Programming for Web  |  Spring 2024</p>
+      </footer>
     </div>
   )
 }
