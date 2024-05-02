@@ -192,7 +192,7 @@ export function NewCharacterForm() {
 
                 <div className="form-group">
                     <label htmlFor="isNPC">
-                        NPC
+                        This is an NPC:
                         <input
                             type="checkbox"
                             name="isNPC"
@@ -205,7 +205,7 @@ export function NewCharacterForm() {
                 </div>
 
             </fieldset>
-            <button type="submit">
+            <button type="submit" disabled={errorObj.charName || errorObj.image}>
                 Add Character
             </button>
         </form>
