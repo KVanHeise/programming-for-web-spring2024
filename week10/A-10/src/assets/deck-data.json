@@ -1,0 +1,52 @@
+[
+    {
+      "charName": "Castor",
+      "player": "Shayne",
+      "species": "Human",
+      "powerset": "Druid, Circle of Stars",
+      "backstory": "Inheritor",
+      "isNPC": false,
+      "image": "castor.png",
+      "id": "1"
+    },
+    {
+      "charName": "Dante",
+      "player": "Eric",
+      "species": "Human",
+      "powerset": "Fighter, Battle Master",
+      "backstory": "Mercinary Veteran",
+      "isNPC": false,
+      "image": "dante.png",
+      "id": "2"
+    },
+    {
+      "charName": "Fluke",
+      "player": "Shane",
+      "species": "Human",
+      "powerset": "Wizard, School of Divination",
+      "backstory": "Hermit",
+      "isNPC": false,
+      "image": "fluke.png",
+      "id": "3"
+    },
+    {
+      "charName": "Ismark",
+      "player": "Kyrin",
+      "species": "Human",
+      "powerset": "None",
+      "backstory": "Barovian Noble",
+      "isNPC": true,
+      "image": "ismark.png",
+      "id": "4"
+    },
+    {
+      "charName": "Mirna",
+      "player": "Coley",
+      "species": "Half-Wood Elf",
+      "powerset": "Cleric, Life Domain",
+      "backstory": "Acolyte",
+      "isNPC": false,
+      "image": "mirna.png",
+      "id": "5"
+    }
+  ]
