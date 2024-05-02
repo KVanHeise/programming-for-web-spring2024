@@ -1,3 +1,7 @@
+import {Link, Route, Routes} from "react-router-dom"
+import {Home} from "./views/Home"
+import {Llamas} from "./views/Llamas"
+import {Alpaca} from "./views/Alpaca"
 import { useState } from 'react'
 
 import './App.css'
@@ -7,7 +11,19 @@ function App() {
 
   return (
     <>
-     Hi
+     {/* Navigation here */}
+     <ul>
+      <li>Home</li>
+      <li>Llamas</li>
+      <li>Alpacas</li>
+     </ul>
+
+     {/* Routes here */}
+     <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/llamas" element={<Llamas/>} />
+      <Route path="/alpacas" element={<Alpaca/>} />
+     </Routes>
     </>
   )
 }
