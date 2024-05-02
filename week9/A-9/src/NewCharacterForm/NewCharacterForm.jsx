@@ -47,7 +47,7 @@ export function NewCharacterForm() {
             setNewCard((prevCard) => {
                 return {
                     ...prevCard,
-                    [event.target.name]: updatedTarget
+                    [event.target.name]: event.target.value
                 }
             })
         }
@@ -55,13 +55,13 @@ export function NewCharacterForm() {
     function submitHandler(event) {
         event.preventDefault();
         console.log({newCard});
-        if(validateForm(newCard)) {
+        if (validateForm(newCard)) {
         //     // send card to App
 
         //     //reset values
             setNewCard(initialCardSetting)
         // }
-    }
+    }}
 
     return (
         <form className="new-character-form-wrapper" onSubmit={submitHandler}>
@@ -196,4 +196,4 @@ export function NewCharacterForm() {
             </button>
         </form>
     )
-}}
+}
