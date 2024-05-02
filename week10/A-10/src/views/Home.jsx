@@ -60,5 +60,5 @@ export function Home() {
         <p>Kyrin Van Heise  |  Programming for Web  |  Spring 2024</p>
       </footer>
     </div>
-  )
+  );
 }
