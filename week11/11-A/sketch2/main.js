@@ -11,7 +11,7 @@ function setup() {
 }
 
 function draw() {
-  background(000);
+  background(0o0);
 
   //allows mouse to rotate box
   orbitControl();
