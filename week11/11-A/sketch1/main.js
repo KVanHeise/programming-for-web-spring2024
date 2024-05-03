@@ -4,16 +4,15 @@ let img;
 
 // Load an image and create a p5.Image object.
 function preload() {
-  img = loadImage('./assets/japanese-garden.jpg');
+  img = loadImage("/assets/japanese-garden.jpg");
 }
 
 function setup() {
-  createCanvas(1000, 1000, WEBGL);
-  background(51);
+  createCanvas(1000, 1000);
 }
 
 function draw() {
-
+  createImage(img);
 }
 
 // function draw() {
