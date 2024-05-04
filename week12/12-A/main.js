@@ -1,6 +1,7 @@
 // create a digital instrument!
 let pad1;
 
+
 function setup() {
   createCanvas (windowWidth, windowHeight);
   background("black");
@@ -31,7 +32,7 @@ class Pad {
 
     //Envelope
 
-    this.env = new p5.Env();
+    this.env = new p5.Envelope();
     this.env.setADSR(0.001, .1, .2, .1);
     this.env.setRange(3, 0);
 
