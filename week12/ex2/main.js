@@ -1,30 +1,11 @@
 let song;
 let button;
-// var button;
-// var amp;
-
-// function setup() {
-//   createCanvas(200, 200);
-//   song = loadSound("./sounds/Cinematic-Atmospheric-Intro.wav", loaded)
-//   amp = new p5.Amplitude();
-// }
-
-// function loaded() {
-//   button = createButton("play");
-//   button.mousePressed(togglePlaying);
-// }
-
-// function draw() {
-//   background(51);
-
-//   var vol = amp.getLevel();
-
-//   ellipse(width / 2, height / 2, vol, vol)
-// }
+let amp;
 
 function setup() {
   createCanvas(200, 200);
   song = loadSound("./sounds/Cinematic-Atmospheric-Intro.wav", loaded);
+  amp = new p5.Amplitude();
   background(51)
 }
 
@@ -45,4 +26,10 @@ function togglePlaying() {
 
 function draw() {
   background(0);
+
+  var vol = amp.getLevel();
+  var diam = map(vol, 0, 1, 10, 200)
+  
+  fill(255, 0, 255);
+  ellipse(width / 2, height / 2, diam, diam);
 }
