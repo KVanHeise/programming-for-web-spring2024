@@ -6,7 +6,6 @@ function setup() {
   createCanvas(500, 500);
   song = loadSound("./sounds/Cinematic-Atmospheric-Intro.wav", loaded);
   amp = new p5.Amplitude();
-  background(51)
 }
 
 function loaded() {
