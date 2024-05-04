@@ -1,7 +1,6 @@
 // create a digital instrument!
 let pad1;
 
-
 function setup() {
   createCanvas (windowWidth, windowHeight);
   background("black");
