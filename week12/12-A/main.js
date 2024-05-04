@@ -44,7 +44,7 @@ class Pad {
 
   draw() {
     let level = this.analyzer.getLevel();
-    let levelHeight = map(level, 0, 2.5, 0, 150);
+    let levelHeight = map(level, 0, 1, 0, 150);
   
     fill("orange");
     rect(this.x, this.y, 150, 150);

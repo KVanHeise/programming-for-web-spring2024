@@ -5,6 +5,7 @@ let amp;
 function setup() {
   createCanvas(500, 500);
   song = loadSound("./sounds/Cinematic-Atmospheric-Intro.wav", loaded);
+  // eslint-disable-next-line no-undef
   amp = new p5.Amplitude();
 }
 
