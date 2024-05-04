@@ -1,11 +1,19 @@
 // create a digital instrument!
+let pad1;
 
 function setup() {
   createCanvas (windowWidth, windowHeight);
   background("black");
 
-  let pad1 = new Pad(10, 10);
+  pad1 = new Pad(10, 10);
+}
+
+function draw() {
   pad1.draw();
+}
+
+function mouseClicked() {
+  pad1.play();
 }
 
 class Pad {
@@ -16,15 +24,40 @@ class Pad {
     this.y = y;
 
     //Oscillator, Envelope, Amplitude objects.
+    this.osc = new p5.Oscillator();
+    this.osc.amp(0);
+    this.osc.setType("sine");
+    this.osc.start();
 
-    this.osc = new p5.Oscillator;
+    //Envelope
+
+    this.env = new p5.Env();
+    this.env.setADSR(0.001, .1, .2, .1);
+    this.env.setRange(3, 0);
+
+    //Amplitude
+
+    this.analyzer = new p5.Amplitude();
+    this.analyzer.setInput(this.env);
 
   }
 
   draw() {
+    let level = this.analyzer.getLevel();
+    let levelHeight = map(level, 0, 2.5, 0, 150);
   
     fill("orange");
     rect(this.x, this.y, 150, 150);
 
+
+    fill("yellow");
+    rect(this.x, this.y, 150, levelHeight);
+
+  }
+
+  play() {
+    this.osc.start();
+    this.osc.freq(130);
+    this.env.play(this.osc);
   }
 }
