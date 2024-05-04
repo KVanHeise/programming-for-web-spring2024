@@ -50,7 +50,7 @@ class Pad {
     rect(this.x, this.y, 150, 150);
 
 
-    fill("yellow");
+    fill("white");
     rect(this.x, this.y, 150, levelHeight);
 
   }
