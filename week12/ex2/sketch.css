@@ -2,6 +2,8 @@ body {
     margin: 0 auto;
     text-align: center;
     position: relative;
+    background-color: black;
+    color: white;
 }
 
 body::after {
@@ -15,4 +17,8 @@ footer {
     bottom: 0;
     width: 100%;
     height: 50px;
+}
+
+button {
+    padding: 15px 50px;
 }

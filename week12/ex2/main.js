@@ -3,7 +3,7 @@ let button;
 let amp;
 
 function setup() {
-  createCanvas(200, 200);
+  createCanvas(500, 500);
   song = loadSound("./sounds/Cinematic-Atmospheric-Intro.wav", loaded);
   amp = new p5.Amplitude();
   background(51)
@@ -28,7 +28,7 @@ function draw() {
   background(0);
 
   var vol = amp.getLevel();
-  var diam = map(vol, 0, 1, 10, 200)
+  var diam = map(vol, 0, 1, 10, 1000)
   
   fill(255, 0, 255);
   ellipse(width / 2, height / 2, diam, diam);
