@@ -28,8 +28,10 @@ function setup() {
 
   //add the ability to use sound!
 
+  // eslint-disable-next-line no-undef
   synth = new p5.PolySynth();
   synth.setADSR(0.1, 0.4, 0.3, 0.05);
+  // eslint-disable-next-line no-undef
   userStartAudio();
 
 }
