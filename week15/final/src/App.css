@@ -11,15 +11,12 @@ body {
 }
 
 .page {
-  max-width: 1237px;
+  max-width: 1250px;
   margin: 0 auto;
   background-color: black;
 }
 
 h1, h2 {
-  font-family: "Rouge Script", cursive;
-  font-weight: 400;
-  font-style: normal;
   font-size: 50px;
   padding-top:10px;
   color:white;
