@@ -8,7 +8,7 @@ import deckData from "../assets/deck-data.json";
 
 
 export function Home() {
-    const [decks, setDecks] = useState(deckData);
+    const [decks] = useState(deckData);
 
   // function deleteCard(id) {
   //   console.log("delete me", id);

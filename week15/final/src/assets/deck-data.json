@@ -48,5 +48,15 @@
       "isNPC": false,
       "image": "mirna.png",
       "id": "5"
+    },
+    {
+      "charName": "Muriel",
+      "player": "Kyrin",
+      "species": "Human",
+      "powerset": "None",
+      "backstory": "Barovian",
+      "isNPC": true,
+      "image": "muriel.png",
+      "id": "6"
     }
   ]

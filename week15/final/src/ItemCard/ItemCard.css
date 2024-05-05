@@ -1,11 +1,11 @@
 .characterCard {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     padding: 10px;
-    height: 250px;
+    height: 400px;
     border: 1px solid white;
     text-align: center;
-    margin: 15px;
+    margin: 10px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
