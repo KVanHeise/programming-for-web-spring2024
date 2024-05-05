@@ -1,15 +1,24 @@
 let snowflakes = [];
+let img;
+
+function preload() {
+    img = loadImage("images/k-crop.jpg")
+}
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
+
     fill(240);
     noStroke();
 }
 
 function draw() {
-    background("darkgreen");
-    let t = frameCount / 60;
 
+    clear ();
+    image(img, 0, 0);
+    let t = frameCount / 1200;
+
+  // create a random number of snowflakes each frame
     for (let i = 0; i < random(5); i++) {
         snowflakes.push(new snowflake());
     }
@@ -25,21 +34,20 @@ function draw() {
 function snowflake() {
     this.posX = 0;
     this.posY = random(-50, 0);
-    this.initialangle = random(0, 2* PI);
-    this.size = random(2, 5);
+    this.initialangle = random(0, 2 * PI);
+    this.size = random(3, 10);
 
-    this.radius = sqrt(random(pow(width/2, 2)));
+    this.radius = sqrt(random(pow(width, 2)));
 
     this.update = function(time){
-
     let w = 0.6;
     let angle = w * time + this.initialangle;
-    this.posX = width / 2 + this.radius * setInterval(angle);
+    this.posX = width / 2 + this.radius * sin(angle);
 
     this.posY += pow(this.size, 0.5);
 
     if (this.posY > height) {
-        let index = snowflake.indexOf(this);
+        let index = snowflakes.indexOf(this);
         snowflakes.splice(index, 1);
     }
 };
