@@ -1,44 +1,32 @@
-var pos, pos2;
-var inc, inc2;
-var amplified, amplified2;
-let slider;
-let slider2;
-let x;
-
-
 function setup() {
-    createCanvas(500, 500);
+    createCanvas(windowWidth, windowHeight);
     angleMode(DEGREES);
+    rectMode(CENTER);
 
-    slider = createSlider(0, 15, 0);
-    slider2 = createSlider(0, 15, 0);
-
-    pos = 0.0;
-    inc = 3.0;
-
-    pos2 = 0.0;
-    inc2 = 7.0;
 }
 
 function draw() {
-
-    clear();
+    background(10, 20, 30);
+    noFill();
+    stroke(255);
 
     translate(width/2, height/2);
 
-    var mySinVal = sin(pos);
-    var mySinVal2 = sin(pos2);
+    for (var i = 0; i < 200; i++) {
+        push();
 
-    amplified = mySinVal * 50;
-    amplified2 = mySinVal2 * 50;
+        rotate(sin(frameCount + i * 2) * 100)
 
-    for (x = 0; x <= 360; x = x + 10) {
+        var r = map(sin(frameCount), -1, 1, 50, 255);
+        var g = map(cos(frameCount/2), -1, 1, 50, 255);
+        var b = map(sin(frameCount/4), -1, 1, 50, 255)
 
-        curve(0, 10, 50, amplified2, amplified, 10, 10, 10);
 
-        rotate(x);
+        stroke(r, g, b);
+
+        rect(0, 0, 600 - i * 3, 600 - i * 6, 200 - i);
+
+        pop();
     }
 
-    pos = pos + slider.value();
-    pos2 = pos2 + slider2.value();
 }
