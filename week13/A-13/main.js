@@ -3,6 +3,7 @@ let img;
 
 function preload() {
     img = loadImage("images/k-crop.jpg")
+    img = loadImage("images/k-crop.jpg")
 }
 
 function setup() {
