@@ -40,6 +40,7 @@ function mousePressed() {
     keys[i].played();
 }
 
+
 // key/button setup
 
 function Key(id){
