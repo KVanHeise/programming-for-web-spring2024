@@ -1,24 +1,37 @@
 let snowflakes = [];
-let img;
+let imageArray = [];
 
 function preload() {
-    img = loadImage("images/k-crop.jpg")
-    img = loadImage("images/k-crop.jpg")
+    imageArray = [
+    loadImage("images/2023_12_1.jpg"),
+    loadImage("images/2023_12_2.jpg"),
+    loadImage("images/2023_12_3.jpg"),
+    loadImage("images/2023_12_4.jpg"),
+    loadImage("images/2023_12_5.jpg")
+    ]
 }
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-
     fill(240);
+    imageMode(CENTER);
     noStroke();
 }
 
 function draw() {
 
     clear ();
-    image(img, 0, 0);
+    background("#042940")
+    
+    const img = imageArray[1];
+
+    img.resize(0, 1000);
+
+    image(img, width/2, height/2, image.width, image.height);
+
     let t = frameCount / 1200;
 
+    translate(0,0);
   // create a random number of snowflakes each frame
     for (let i = 0; i < random(5); i++) {
         snowflakes.push(new snowflake());
