@@ -1,8 +1,8 @@
 import { useState } from "react";
 import {Link} from "react-router-dom";
 import "../css/App.css";
-import Masthead from "../Masthead/Masthead";
-import ItemCard from "../ItemCard/ItemCard";
+import Masthead from "../assets/Masthead/Masthead";
+import ItemCard from "../assets/ItemCard/ItemCard";
 import deckData from "../assets/deck-data.json";
 
 
