@@ -3,42 +3,60 @@
       "projectName": "'My Practice'",
       "projectType": "Illustration, Video",
       "image": "/my-practice.jpg",
-      "thumbnailImage": "/thumbnails/my-practice-thumb.jpg",
       "id": "1"
     },
     {
       "projectName": "The Copper Dragon",
       "projectType": "Brand Identity",
       "image": "/copper-dragon.jpg",
-      "thumbnailImage": "/thumbnails/copper-dragon-thumb.jpg",
       "id": "2"
     },
     {
-      "projectName": "& The Kitchen Sink",
-      "projectType": "Layout & Branding",
-      "image": "/kitchen-sink.jpg",
-      "thumbnailImage": "/thumbnails/kitchen-sink-thumb.jpg",
+      "projectName": "The Giver",
+      "projectType": "Illustration, Book Cover / Layout Design",
+      "image": "/giver.png",
       "id": "3"
     },
     {
-      "projectName": "'My Practice'",
-      "projectType": "Illustration, Video",
-      "image": "/my-practice.jpg",
-      "thumbnailImage": "/thumbnails/my-practice-thumb.jpg",
+      "projectName": "'Make It Speak'",
+      "projectType": "Digital Illustration",
+      "image": "/makeItSpeak.jpg",
       "id": "4"
     },
     {
-      "projectName": "'My Practice'",
-      "projectType": "Illustration, Video",
-      "image": "/my-practice.jpg",
-      "thumbnailImage": "/thumbnails/my-practice-thumb.jpg",
+      "projectName": "Barber Logo",
+      "projectType": "Logo Design & Photo Editing",
+      "image": "/barber.jpg",
       "id": "5"
     },
     {
-      "projectName": "'My Practice'",
-      "projectType": "Illustration, Video",
-      "image": "/my-practice.jpg",
-      "thumbnailImage": "/thumbnails/my-practice-thumb.jpg",
+      "projectName": "The Princess Bride",
+      "projectType": "Illustration, Book Cover / Layout Design",
+      "image": "/princessBride.png",
       "id": "6"
+    },
+    {
+      "projectName": "Ormond Logo",
+      "projectType": "Logo Design & Photo Editing",
+      "image": "/ormond.png",
+      "id": "7"
+    },
+    {
+      "projectName": "Threads Logo",
+      "projectType": "Logo Design & Photo Editing",
+      "image": "/threads.png",
+      "id": "8"
+    },
+    {
+      "projectName": "Valhalla Logo",
+      "projectType": "Logo Design & Photo Editing",
+      "image": "/valhalla.png",
+      "id": "9"
+    },
+    {
+      "projectName": "Aesop & Grimm Box Set",
+      "projectType": "Layout & Branding",
+      "image": "/boxset.png",
+      "id": "10"
     }
   ]

@@ -24,7 +24,7 @@ export default function ItemCard({
             </div>
 
             <div className="projectClass">
-                {projectType}
+                <strong>Project Type: </strong>{projectType}
             </div>
 
             {/* <div className="backstory">
