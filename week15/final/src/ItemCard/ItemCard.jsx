@@ -15,15 +15,15 @@ export default function ItemCard({
 })  {
     return (
         <div className="projectCard">
+            <div className="projectName">
+                <Link to={`${id}`}>{projectName}</Link>
+            </div>
+            
             <Link to={`${id}`}>
                 <div className="cardImg">
                     <img src={image} alt={"projectImage"} />
                 </div>
             </Link>
-
-                <div className="projectName">
-                    <Link to={`${id}`}>{projectName}</Link>
-                </div>
 
                 <div className="projectClass">
                     <p>{projectType}</p>

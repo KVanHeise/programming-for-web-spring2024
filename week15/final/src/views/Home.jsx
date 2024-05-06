@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {Link} from "react-router-dom";
 import "../App.css";
 import Masthead from "../Masthead/Masthead";
 import ItemCard from "../ItemCard/ItemCard";
@@ -11,6 +12,7 @@ export function Home() {
   return (
     <div className="page">
       {/* Masthead goes here */}
+      <Link to="/About" className="about">About The Artist</Link>
       <Masthead />
       <div className="collection">
         {/* card map goes here */}
