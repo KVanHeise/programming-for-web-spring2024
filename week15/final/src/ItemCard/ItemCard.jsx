@@ -6,30 +6,30 @@ import "./ItemCard.css";
 
 export default function ItemCard({
     projectName,
-    powerset,
-    backstory,
-    image,
+    projectType,
+    // backstory,
+    thumbnailImage,
     id,
     // deleteFn,
     // duplicateFn
 })  {
     return (
-        <div className="characterCard">
-            <div className="characterName">
+        <div className="projectCard">
+            <div className="projectName">
                 <Link to={`${id}`}>{projectName}</Link>
             </div>
 
             <div className="cardImg">
-                <img src={image} alt={"characterImage"} />
+                <img src={thumbnailImage} alt={"projectImage"} />
             </div>
 
-            <div className="characterClass">
-                {powerset}
+            <div className="projectClass">
+                {projectType}
             </div>
 
-            <div className="backstory">
+            {/* <div className="backstory">
                 {backstory}
-            </div>
+            </div> */}
 
             {/* <div className="action">
                 <a href="#" onClick={(evt) => {
@@ -48,9 +48,9 @@ export default function ItemCard({
 
 ItemCard.propTypes = {
     projectName: propTypes.string,
-    powerset: propTypes.string,
+    projectType: propTypes.string,
     backstory: propTypes.string,
-    image: propTypes.string,
+    thumbnailImage: propTypes.string,
     id: propTypes.string,
     // duplicateFn: propTypes.func,
     // deleteFn: propTypes.func

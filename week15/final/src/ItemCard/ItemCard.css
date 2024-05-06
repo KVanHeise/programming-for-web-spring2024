@@ -1,4 +1,4 @@
-.characterCard {
+.projectCard {
     width: 100%;
     max-width: 600px;
     padding: 10px;
@@ -11,20 +11,23 @@
     flex-direction: column;
     justify-content: space-around;
     position: relative;
-    background-color: black;
-    color: white;
 }
 
-.characterCard a {
+.projectCard img {
+    height:300px;
+    width: 300px;
+}
+
+.projectCard a {
     text-decoration: none;
     color: darkred;
 }
 
-.characterCard a:hover {
+.projectCard a:hover {
     color: white;    
 }
 
-.characterName {
+.projectName {
     font-size: 30px;
   }
 

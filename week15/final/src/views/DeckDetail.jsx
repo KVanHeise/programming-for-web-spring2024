@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import {useParams, Link} from "react-router-dom";
-import "../index.css";
+import "../App.css";
 
 export function DeckDetail({data}) {
     const { id } = useParams();
@@ -8,21 +8,21 @@ export function DeckDetail({data}) {
     const selectedDeck = data.find((deck) => deck.id === id);
     console.log
     return(
-        <div className="card-info-page">
+        <div className="project-info-page">
 
         <h1>{selectedDeck.projectName}</h1>
 
         <img src={selectedDeck.image} alt={selectedDeck.projectName} className="fullprofile-img" />
 
-        <div className="character-details">
-            <p>{selectedDeck.species}</p>
+        <div className="project-details">
+            {/* <p>{selectedDeck.species}</p> */}
 
-            <p>{selectedDeck.powerset}</p>
+            <p>{selectedDeck.projectType}</p>
 
-            <p>{selectedDeck.backstory}</p>
+            {/* <p>{selectedDeck.backstory}</p> */}
             </div>
             
-            <p><strong>Played by:</strong> {selectedDeck.player}</p>
+            {/* <p><strong>Played by:</strong> {selectedDeck.player}</p> */}
 
         <Link to="/" className="return-to-home">Return to Home</Link>
 
