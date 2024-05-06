@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {Link} from "react-router-dom";
-import "../App.css";
+import "../css/App.css";
 import Masthead from "../Masthead/Masthead";
 import ItemCard from "../ItemCard/ItemCard";
 import deckData from "../assets/deck-data.json";
@@ -20,6 +20,7 @@ export function Home() {
           <li><Link to="/Contact" className="about">Contact</Link></li>
         </ul>
       </nav>
+
       <div className="collection">
         {/* card map goes here */}
         {/* use ItemCard component in Loop */}
@@ -31,6 +32,7 @@ export function Home() {
           )
         })}
       </div>
+
       <footer>
       <hr />
         <p>Kyrin Van Heise  |  Programming for Web  |  Spring 2024</p>

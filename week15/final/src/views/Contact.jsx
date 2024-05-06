@@ -1,7 +1,8 @@
 import {Link} from "react-router-dom";
-import "../App.css";
+import "../css/App.css";
+import "../css/ContactForm.css";
 
-export function About() {
+export function Contact() {
     return(
         <div className="contact-page">
 
@@ -15,41 +16,45 @@ export function About() {
 
         <h1>Contact Me</h1>
 
-        <div className="contact-form">
-            <form>
-            <label htmlFor="fname"> First Name</label>
-                <input
-                    type="text"
-                    name="fname"
-                    id="fname"
-                    value=""
-                />
+        <div className="contact-form-wrapper">
+            <form className="contact-form">
+                <label htmlFor="fname"> First Name</label>
+                    <input
+                        type="text"
+                        name="fname"
+                        id="fname"
+                        value=""
+                    />
 
-            <label htmlFor="lname"> Last Name</label>
-                <input
-                    type="text"
-                    name="lname"
-                    id="lname"
-                    value=""
-                />
+                <label htmlFor="lname"> Last Name</label>
+                    <input
+                        type="text"
+                        name="lname"
+                        id="lname"
+                        value=""
+                    />
 
-            <label htmlFor="email"> Email</label>
-                <input
-                    type="text"
-                    name="email"
-                    id="email"
-                    value=""
-                />
-            <label htmlFor="phone"> Phone Number</label>
-                <input
-                    type="text"
-                    name="phone"
-                    id="phone"
-                    value=""
-                />
-            <input type="submit" value="Submit"/>
+                <label htmlFor="email"> Email</label>
+                    <input
+                        type="text"
+                        name="email"
+                        id="email"
+                        value=""
+                    />
+                <label htmlFor="phone"> Phone Number</label>
+                    <input
+                        type="text"
+                        name="phone"
+                        id="phone"
+                        value=""
+                    />
             </form>
-        </div>
+
+        <button type="submit">
+                Submit
+            </button>
+
+    </div>
 
         <footer>
             <hr />

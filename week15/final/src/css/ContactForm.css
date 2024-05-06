@@ -1,0 +1,47 @@
+.contact-form-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    border: 1px solid white;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+}
+
+label {
+    margin-right: 5px;
+    padding-bottom: 5px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+input {
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 10px;
+    width: 90%;
+    padding: 5px;
+    background-color: #EEEEEE;
+  }
+
+  button {
+    margin-top: 5px;
+    margin-left: 355px;
+    margin-bottom: 20px;
+    padding: 5px 25px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  button:hover {
+    background-color: rgb(60, 34, 96);
+    color: white;
+  }

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import {useParams, Link} from "react-router-dom";
-import "../App.css";
+import "../css/App.css";
 
 export function DeckDetail({data}) {
     const { id } = useParams();
