@@ -15,33 +15,34 @@ export default function ItemCard({
 })  {
     return (
         <div className="projectCard">
-            <div className="projectName">
-                <Link to={`${id}`}>{projectName}</Link>
-            </div>
+            <Link to={`${id}`}>
+                <div className="cardImg">
+                    <img src={image} alt={"projectImage"} />
+                </div>
+            </Link>
 
-            <div className="cardImg">
-                <img src={image} alt={"projectImage"} />
-            </div>
+                <div className="projectName">
+                    <Link to={`${id}`}>{projectName}</Link>
+                </div>
 
-            <div className="projectClass">
-                <strong>Project Type: </strong>{projectType}
-            </div>
+                <div className="projectClass">
+                    <p>{projectType}</p>
+                </div>
 
-            {/* <div className="backstory">
-                {backstory}
-            </div> */}
+                {/* <div className="backstory">
+                    {backstory}
+                </div> */}
 
-            {/* <div className="action">
-                <a href="#" onClick={(evt) => {
-                    evt.preventDefault();
-                    deleteFn(id)
-                }}><img src={trash}/></a>
-                <a href="#" onClick={(evt) => {
-                    evt.preventDefault();
-                    duplicateFn(id)
-                }}><img src={copy}/></a>
-            </div> */}
-
+                {/* <div className="action">
+                    <a href="#" onClick={(evt) => {
+                        evt.preventDefault();
+                        deleteFn(id)
+                    }}><img src={trash}/></a>
+                    <a href="#" onClick={(evt) => {
+                        evt.preventDefault();
+                        duplicateFn(id)
+                    }}><img src={copy}/></a>
+                </div> */}
         </div>
     )
 }
