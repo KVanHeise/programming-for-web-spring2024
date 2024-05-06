@@ -2,48 +2,42 @@
     {
       "projectName": "'My Practice'",
       "projectType": "Illustration, Video",
-      "backstory": "Inheritor",
-      "image": "/thumbnails/my-practice-thumb.jpg",
+      "image": "/my-practice.jpg",
       "thumbnailImage": "/thumbnails/my-practice-thumb.jpg",
       "id": "1"
     },
     {
-      "projectName": "'My Practice'",
-      "projectType": "Illustration, Video",
-      "backstory": "Inheritor",
-      "image": "/thumbnails/my-practice-thumb.jpg",
-      "thumbnailImage": "/thumbnails/my-practice-thumb.jpg",
+      "projectName": "The Copper Dragon",
+      "projectType": "Brand Identity",
+      "image": "/copper-dragon.jpg",
+      "thumbnailImage": "/thumbnails/copper-dragon-thumb.jpg",
       "id": "2"
     },
     {
-      "projectName": "'My Practice'",
-      "projectType": "Illustration, Video",
-      "backstory": "Inheritor",
-      "image": "/thumbnails/my-practice-thumb.jpg",
-      "thumbnailImage": "/thumbnails/my-practice-thumb.jpg",
+      "projectName": "& The Kitchen Sink",
+      "projectType": "Layout & Branding",
+      "image": "/kitchen-sink.jpg",
+      "thumbnailImage": "/thumbnails/kitchen-sink-thumb.jpg",
       "id": "3"
     },
     {
       "projectName": "'My Practice'",
       "projectType": "Illustration, Video",
-      "backstory": "Inheritor",
-      "image": "/thumbnails/my-practice-thumb.jpg",
+      "image": "/my-practice.jpg",
       "thumbnailImage": "/thumbnails/my-practice-thumb.jpg",
       "id": "4"
     },
     {
       "projectName": "'My Practice'",
       "projectType": "Illustration, Video",
-      "backstory": "Inheritor",
-      "image": "/thumbnails/my-practice-thumb.jpg",
+      "image": "/my-practice.jpg",
       "thumbnailImage": "/thumbnails/my-practice-thumb.jpg",
       "id": "5"
     },
     {
       "projectName": "'My Practice'",
       "projectType": "Illustration, Video",
-      "backstory": "Inheritor",
-      "image": "/thumbnails/my-practice-thumb.jpg",
+      "image": "/my-practice.jpg",
       "thumbnailImage": "/thumbnails/my-practice-thumb.jpg",
       "id": "6"
     }

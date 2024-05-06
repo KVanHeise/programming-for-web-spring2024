@@ -8,7 +8,7 @@ export default function ItemCard({
     projectName,
     projectType,
     // backstory,
-    thumbnailImage,
+    image,
     id,
     // deleteFn,
     // duplicateFn
@@ -20,7 +20,7 @@ export default function ItemCard({
             </div>
 
             <div className="cardImg">
-                <img src={thumbnailImage} alt={"projectImage"} />
+                <img src={image} alt={"projectImage"} />
             </div>
 
             <div className="projectClass">
@@ -50,7 +50,7 @@ ItemCard.propTypes = {
     projectName: propTypes.string,
     projectType: propTypes.string,
     backstory: propTypes.string,
-    thumbnailImage: propTypes.string,
+    image: propTypes.string,
     id: propTypes.string,
     // duplicateFn: propTypes.func,
     // deleteFn: propTypes.func
