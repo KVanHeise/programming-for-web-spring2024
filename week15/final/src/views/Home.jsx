@@ -12,8 +12,14 @@ export function Home() {
   return (
     <div className="page">
       {/* Masthead goes here */}
-      <Link to="/About" className="about">About The Artist</Link>
       <Masthead />
+      <nav>
+        <ul>
+          <li><Link to="/" className="home">Home</Link></li>
+          <li><Link to="/About" className="about">About</Link></li>
+          <li><Link to="/Contact" className="about">Contact</Link></li>
+        </ul>
+      </nav>
       <div className="collection">
         {/* card map goes here */}
         {/* use ItemCard component in Loop */}

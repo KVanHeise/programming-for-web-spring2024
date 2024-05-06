@@ -9,6 +9,13 @@ export function DeckDetail({data}) {
     console.log
     return(
         <div className="project-info-page">
+        <nav>
+            <ul>
+            <li><Link to="/" className="home">Home</Link></li>
+            <li><Link to="/About" className="about">About</Link></li>
+            <li><Link to="/Contact" className="about">Contact</Link></li>
+            </ul>
+        </nav>
 
         <h1>{selectedDeck.projectName}</h1>
 
@@ -22,8 +29,10 @@ export function DeckDetail({data}) {
 
             </div>
 
-        <Link to="/" className="return-to-home">Return to Home</Link>
-
+        <footer>
+        <hr />
+        <p>Kyrin Van Heise  |  Programming for Web  |  Spring 2024</p>
+        </footer>
         </div>
     )
 }
