@@ -5,7 +5,7 @@ import "./ItemCard.css";
 // import copy from "../assets/icons/copy.png";
 
 export default function ItemCard({
-    charName,
+    projectName,
     powerset,
     backstory,
     image,
@@ -16,7 +16,7 @@ export default function ItemCard({
     return (
         <div className="characterCard">
             <div className="characterName">
-                <Link to={`${id}`}>{charName}</Link>
+                <Link to={`${id}`}>{projectName}</Link>
             </div>
 
             <div className="cardImg">
@@ -47,7 +47,7 @@ export default function ItemCard({
 }
 
 ItemCard.propTypes = {
-    charName: propTypes.string,
+    projectName: propTypes.string,
     powerset: propTypes.string,
     backstory: propTypes.string,
     image: propTypes.string,

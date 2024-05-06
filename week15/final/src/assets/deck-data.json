@@ -1,16 +1,16 @@
 [
     {
-      "charName": "Castor",
+      "projectName": "Castor",
       "player": "Shayne",
       "species": "Human",
       "powerset": "Druid, Circle of Stars",
       "backstory": "Inheritor",
       "isNPC": false,
-      "image": "castor.png",
+      "image": "/thumbnails/my-practice-thumb.jpg",
       "id": "1"
     },
     {
-      "charName": "Dante",
+      "projectName": "Dante",
       "player": "Eric",
       "species": "Human",
       "powerset": "Fighter, Battle Master",
@@ -20,7 +20,7 @@
       "id": "2"
     },
     {
-      "charName": "Fluke",
+      "projectName": "Fluke",
       "player": "Shane",
       "species": "Human",
       "powerset": "Wizard, School of Divination",
@@ -30,7 +30,7 @@
       "id": "3"
     },
     {
-      "charName": "Ismark",
+      "projectName": "Ismark",
       "player": "Kyrin",
       "species": "Human",
       "powerset": "None",
@@ -40,7 +40,7 @@
       "id": "4"
     },
     {
-      "charName": "Mirna",
+      "projectName": "Mirna",
       "player": "Coley",
       "species": "Half-Wood Elf",
       "powerset": "Cleric, Life Domain",
@@ -50,7 +50,7 @@
       "id": "5"
     },
     {
-      "charName": "Muriel",
+      "projectName": "Muriel",
       "player": "Kyrin",
       "species": "Human",
       "powerset": "None",

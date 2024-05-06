@@ -10,9 +10,9 @@ export function DeckDetail({data}) {
     return(
         <div className="card-info-page">
 
-        <h1>{selectedDeck.charName}</h1>
+        <h1>{selectedDeck.projectName}</h1>
 
-        <img src={selectedDeck.image} alt={selectedDeck.charName} className="fullprofile-img" />
+        <img src={selectedDeck.image} alt={selectedDeck.projectName} className="fullprofile-img" />
 
         <div className="character-details">
             <p>{selectedDeck.species}</p>
