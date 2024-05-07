@@ -2,8 +2,8 @@
     {
       "projectName": "Practice Makes Progress",
       "projectType": "Illustration, Video",
-      "image": "../images/my-practice.jpg",
-      "image2": "../images/practice-makes-progress.gif",
+      "image": "./images/my-practice.jpg",
+      "image2": "./images/practice-makes-progress.gif",
       "projectDetails": "A video project documenting part of my art journey. Full video with sound available here: https://youtu.be/Nnc36QJDBu8 ",
       "programsUsed": "Adobe Creative Suite",
       "id": "1"
@@ -11,8 +11,8 @@
     {
       "projectName": "The Copper Dragon",
       "projectType": "Brand Identity, Asset Creation, Illustration",
-      "image": "../images/copper-dragon.jpg",
-      "image2": "../images/copper-dragon2.jpg",
+      "image": "./images/copper-dragon.jpg",
+      "image2": "./images/copper-dragon2.jpg",
       "projectDetails": "Logo, Branding and Asset designs for a tavern/restaurant.",
       "programsUsed": "Adobe Creative Suite",
       "id": "2"
@@ -20,8 +20,8 @@
     {
       "projectName": "Dragon Hoard Games",
       "projectType": "Logo & Apparel Design",
-      "image": "../images/dragon-hoard.jpg",
-      "image2": "../images/dragon-hoard2.jpg",
+      "image": "./images/dragon-hoard.jpg",
+      "image2": "./images/dragon-hoard2.jpg",
       "projectDetails": "Logo & Apparel Design for a game store / cafe.",
       "programsUsed": "Adobe Creative Suite",
       "id": "3"
@@ -29,8 +29,8 @@
     {
       "projectName": "The Princess Bride",
       "projectType": "Illustration, Book Cover / Layout Design",
-      "image": "../images/princessBride.png",
-      "image2": "../images/pb2.png",
+      "image": "./images/princessBride.png",
+      "image2": "./images/pb2.png",
       "projectDetails": "Cover design for the book 'The Princess Bride'.",
       "programsUsed": "Adobe Creative Suite",
       "id": "4"
@@ -38,8 +38,8 @@
     {
       "projectName": "Logo Designs",
       "projectType": "Logo Design & Photo Editing",
-      "image": "../images/barber.jpg",
-      "image2": "../images/valhalla.png",
+      "image": "./images/barber.jpg",
+      "image2": "./images/valhalla.png",
       "projectDetails": "A couple of my logo designs shown in mock-up images.",
       "programsUsed": "Adobe Creative Suite",
       "id": "5"
@@ -47,8 +47,8 @@
     {
       "projectName": "The Giver",
       "projectType": "Illustration, Book Cover / Layout Design",
-      "image": "../images/giver.png",
-      "image2": "../images/giver2.png",
+      "image": "./images/giver.png",
+      "image2": "./images/giver2.png",
       "projectDetails": "Cover design for the book 'The Giver'.",
       "programsUsed": "Adobe Creative Suite",
       "id": "6"
@@ -56,8 +56,8 @@
     {
       "projectName": "'Make It Speak'",
       "projectType": "Digital Illustration, Mural Design",
-      "image": "../images/makeItSpeak.jpg",
-      "image2": "../images/make-it-speak2.jpg",
+      "image": "./images/makeItSpeak.jpg",
+      "image2": "./images/make-it-speak2.jpg",
       "projectDetails": "Mural project, using type to express the internal struggle of mental health issues / mental illness.",
       "programsUsed": "Adobe Creative Suite",
       "id": "7"
@@ -65,8 +65,8 @@
     {
       "projectName": "Aesop & Grimm Box Set",
       "projectType": "Layout & Branding",
-      "image": "../images/boxset.png",
-      "image2": "../images/box-set.png",
+      "image": "./images/boxset.png",
+      "image2": "./images/box-set.png",
       "projectDetails": "Cover & Layout design for a box set of Aesop's Fables and The Brother's Grimm stories.",
       "programsUsed": "Adobe Creative Suite",
       "id": "8"
