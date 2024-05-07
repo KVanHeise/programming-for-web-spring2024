@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 import "../css/App.css";
 import "../css/ContactForm.css";
-import Masthead from "../assets/Masthead/Masthead";
+import Masthead from "../assets/Masthead";
 
 export function Contact() {
     return(
@@ -51,11 +51,9 @@ export function Contact() {
                             value=""
                         />
                 </form>
-
                 <button type="submit">
                         Submit
                     </button>
-
             </div>
 
             <footer>

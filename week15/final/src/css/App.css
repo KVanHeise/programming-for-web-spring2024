@@ -1,3 +1,5 @@
+/* CSS pertaining to the entire app. Page-specific details located below*/
+
 body {
   background-color: rgb(205, 208, 225);
   margin: 0;
@@ -31,17 +33,6 @@ nav li {
   padding-left: 20px;
 }
 
-.collection {
-  display: flex;
-  flex-direction: row;
-  flex-wrap:wrap;
-  justify-content: center;
-}
-
-.page {
-  margin: 0 auto;
-}
-
 h1, h2 {
   font-size: 50px;
   padding-top:10px;
@@ -73,47 +64,6 @@ p {
   font-style: normal;
 }
 
-.project-info-page {
-  max-width: windowWidth;
-  margin: 20px auto;
-  border-radius: 20px;
-}
-
-.project-info-page p {
-  text-align: center;
-  margin: 0 auto;
-  padding: 10px;
-}
-
-.project-details {
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.fullprofile-img {
-  min-width: 25%;
-  max-width: 75%;
-  margin: 10px auto;
-}
-
-.return-to-home {
-  display: flex;
-  justify-content: center;
-  padding-top: 50px;
-  margin: 50px;
-  text-decoration: none;
-  text-align: center;
-  font-size: 20px;
-  border-top: 1px solid white;
-}
-
-.return-to-home:hover {
-  color: rgb(150, 125, 218);
-}
-
 footer {
   padding-top: 25px;
   padding-bottom: 25px;
@@ -125,6 +75,21 @@ footer nav {
   border-bottom: 1px solid white;
   margin-bottom: 0;
 }
+
+/* "Home" View CSS Info*/
+
+.collection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+.page {
+  margin: 0 auto;
+}
+
+/* "About" View CSS Info*/
 
 .headshot {
   width:30%;
@@ -157,6 +122,34 @@ footer nav {
 
 .artist-details-text li {
   padding: 5px;
+}
+
+/* "Project Detail" Page CSS */
+
+.project-info-page {
+  max-width: windowWidth;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+
+.project-info-page p {
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.project-details {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fullprofile-img {
+  min-width: 25%;
+  max-width: 75%;
+  margin: 10px auto;
 }
 
 /* Font CSS Info

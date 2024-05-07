@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import {useParams, Link} from "react-router-dom";
 import "../css/App.css";
-import Masthead from "../assets/Masthead/Masthead";
+import Masthead from "../assets/Masthead";
 
-export function DeckDetail({data}) {
+export function ProjectDetail({data}) {
     const { id } = useParams();
     console.log("params", id);
     const selectedDeck = data.find((deck) => deck.id === id);
@@ -45,6 +45,6 @@ export function DeckDetail({data}) {
     )
 }
 
-DeckDetail.propTypes = { 
+ProjectDetail.propTypes = { 
     data: PropTypes.array
 };

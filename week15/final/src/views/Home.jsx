@@ -11,7 +11,6 @@ export function Home() {
 
   return (
     <div className="page">
-      {/* Masthead goes here */}
       <Masthead />
       <nav>
         <ul>
@@ -22,13 +21,11 @@ export function Home() {
       </nav>
 
       <div className="collection">
-        {/* card map goes here */}
-        {/* use ItemCard component in Loop */}
-        {decks.map((characterDeck) => {
+        {decks.map((projectDeck) => {
           return (
             <ItemCard
-            key={characterDeck.id}
-            {...characterDeck}/>
+            key={projectDeck.id}
+            {...projectDeck}/>
           )
         })}
       </div>

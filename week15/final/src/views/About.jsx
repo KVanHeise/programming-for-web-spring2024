@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 import "../css/App.css";
-import Masthead from "../assets/Masthead/Masthead";
+import Masthead from "../assets/Masthead";
 
 export function About() {
     return(

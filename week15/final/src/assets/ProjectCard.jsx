@@ -1,8 +1,8 @@
 import propTypes from "prop-types";
 import {Link} from "react-router-dom";
-import "./ItemCard.css";
+import "./ProjectCard.css";
 
-export default function ItemCard({
+export default function ProjectCard({
     projectName,
     projectType,
     image,
@@ -27,7 +27,7 @@ export default function ItemCard({
     )
 }
 
-ItemCard.propTypes = {
+ProjectCard.propTypes = {
     projectName: propTypes.string,
     projectType: propTypes.string,
     backstory: propTypes.string,

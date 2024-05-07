@@ -29,7 +29,7 @@ input {
     background-color: #EEEEEE;
   }
 
-  button {
+button {
     margin-top: 5px;
     margin-left: 355px;
     margin-bottom: 20px;
@@ -41,7 +41,7 @@ input {
     font-style: normal;
   }
 
-  button:hover {
+button:hover {
     background-color: rgb(60, 34, 96);
     color: white;
   }
