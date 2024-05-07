@@ -34,8 +34,13 @@ export function Home() {
       </div>
 
       <footer>
-      <hr />
-        <p>Kyrin Van Heise  |  Programming for Web  |  Spring 2024</p>
+      <nav>
+        <ul>
+          <li><Link to="/" className="home">Home</Link></li>
+          <li><Link to="/About" className="about">About</Link></li>
+          <li><Link to="/Contact" className="about">Contact</Link></li>
+          </ul>
+        </nav>
       </footer>
     </div>
   );

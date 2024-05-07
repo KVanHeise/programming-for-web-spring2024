@@ -11,7 +11,6 @@ nav {
   border-top: 1px dashed black;
   border-bottom: 1px dashed black;
   font-size: 20px;
-  margin-bottom: 50px;
   text-decoration: none;
   font-family: "Permanent Marker", cursive;
   font-weight: 400;
@@ -57,6 +56,7 @@ h3 {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   font-style: normal;
+  text-align: center;
 }
 
 h4 {
@@ -76,7 +76,6 @@ p {
 .project-info-page {
   max-width: windowWidth;
   margin: 20px auto;
-  padding-top: 30px;
   border-radius: 20px;
 }
 
@@ -86,20 +85,18 @@ p {
   padding: 10px;
 }
 
-.fullprofile-img {
-  min-width: 25%;
-  max-width: 75%;
-  padding: 50px;
-  margin: 10px auto;
+.project-details {
+  padding-top: 20px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.project-details {
-  padding-top: 20px;
-  padding-bottom: 70px;
+.fullprofile-img {
+  min-width: 25%;
+  max-width: 75%;
+  margin: 10px auto;
 }
 
 .return-to-home {
@@ -118,13 +115,15 @@ p {
 }
 
 footer {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   margin: 0 auto;
 }
 
-footer p {
-  text-align: center;
+footer nav {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  margin-bottom: 0;
 }
 
 .headshot {
