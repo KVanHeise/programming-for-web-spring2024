@@ -1,8 +1,8 @@
 import { useState } from "react";
 import {Link} from "react-router-dom";
 import "../css/App.css";
-import Masthead from "../assets/Masthead/Masthead";
-import ItemCard from "../assets/ItemCard/ItemCard";
+import Masthead from "../assets/Masthead.jsx";
+import ProjectCard from "../assets/ProjectCard.jsx";
 import deckData from "../assets/deck-data.json";
 
 
@@ -23,7 +23,7 @@ export function Home() {
       <div className="collection">
         {decks.map((projectDeck) => {
           return (
-            <ItemCard
+            <ProjectCard
             key={projectDeck.id}
             {...projectDeck}/>
           )

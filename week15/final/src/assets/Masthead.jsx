@@ -1,5 +1,4 @@
-// import mastheadImg from "../assets/masthead.png";
-import "./Masthead.css";
+import "../css/Masthead.css";
 
 export default function Masthead() {
     return (

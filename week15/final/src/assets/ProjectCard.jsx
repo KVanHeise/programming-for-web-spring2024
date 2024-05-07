@@ -1,6 +1,6 @@
 import propTypes from "prop-types";
 import {Link} from "react-router-dom";
-import "./ProjectCard.css";
+import "../css/ProjectCard.css";
 
 export default function ProjectCard({
     projectName,
