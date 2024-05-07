@@ -2,7 +2,7 @@
     {
       "projectName": "Practice Makes Progress",
       "projectType": "Illustration, Video",
-      "image": "/my-practice.jpg",
+      "image": "../images/my-practice.jpg",
       "image2": "/detail-page-images/practice-makes-progress.gif",
       "projectDetails": "A video project documenting part of my art journey. Full video with sound available here: https://youtu.be/Nnc36QJDBu8 ",
       "programsUsed": "Adobe Creative Suite",
